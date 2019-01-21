@@ -4,6 +4,9 @@
       "@id" : "https://w3id.org/def/lis#hasExplanation",
       "@type" : "@id"
     },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
     "hasTheoreticalCompound" : {
       "@id" : "https://w3id.org/def/lis#hasTheoreticalCompound",
       "@type" : "@id"
@@ -46,6 +49,9 @@
     "Hypothesis" : {
       "@id" : "https://w3id.org/def/lis#Hypothesis"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
     "hasHypothesis" : {
       "@id" : "https://w3id.org/def/lis#hasHypothesis",
       "@type" : "@id"
@@ -76,6 +82,9 @@
     },
     "IRExplanation" : {
       "@id" : "https://w3id.org/def/lis#IRExplanation"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
     },
     "Explanation" : {
       "@id" : "https://w3id.org/def/lis#Explanation"
