@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:TheoreticalCompound" "base:CLAwithExplanations" "base:Hypothesis" "base:RuleType" "base:Explanation" "base:IonizationMode" "base:Modifier" "base:Experiment" "base:CertaintyLevel" "base:EmpiricalCompound" "3fab922b:16870d5ed5f:-7ffc" "skos:OrderedCollection" "skos:Collection" "skos:ConceptScheme" "skos:Concept" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:TheoreticalCompound" "base:CLAwithExplanations" "base:Hypothesis" "base:RuleType" "base:Explanation" "base:IonizationMode" "base:Modifier" "base:Experiment" "base:CertaintyLevel" "base:EmpiricalCompound" "a1b51ff:16871db4bc7:-7ffc" "skos:OrderedCollection" "skos:Collection" "skos:ConceptScheme" "skos:Concept" ; /*classes style*/
 	"skos:definition" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
 	"skos:relatedMatch" -> "skos:related" [ label = "rdfs:subPropertyOf" ];
 	"skos:relatedMatch" -> "skos:mappingRelation" [ label = "rdfs:subPropertyOf" ];
@@ -23,26 +23,26 @@ node [shape = rectangle, color="orange"]; "base:TheoreticalCompound" "base:CLAwi
 	"base:coreInformation" -> "base:explanationContent" [ label = "rdfs:subPropertyOf" ];
 	"skos:narrowerTransitive" -> "skos:semanticRelation" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "base:adductRelationRuleType" [ label = "owl:hasValue" ];
-	"NULL" -> "3fab922b:16870d5ed5f:-7ffb" [ label = "owl:unionOf" ];
-	"NULL" -> "base:name" [ label = "owl:onProperty" ];
 	"NULL" -> "base:coreInformation" [ label = "owl:onProperty" ];
+	"NULL" -> "base:name" [ label = "owl:onProperty" ];
 	"NULL" -> "base:identifier" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasHypothesis" [ label = "owl:onProperty" ];
-	"NULL" -> "base:evidenceFor" [ label = "owl:onProperty" ];
-	"NULL" -> "base:ionizationRuleType" [ label = "owl:hasValue" ];
 	"NULL" -> "xsd:double" [ label = "owl:onDataRange" ];
+	"NULL" -> "base:ionizationRuleType" [ label = "owl:hasValue" ];
+	"NULL" -> "base:evidenceFor" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Hypothesis" [ label = "owl:onClass" ];
 	"NULL" -> "base:adduct" [ label = "owl:onProperty" ];
 	"NULL" -> "base:TheoreticalCompound" [ label = "owl:onClass" ];
 	"NULL" -> "skos:Concept" [ label = "rdf:first" ];
+	"NULL" -> "a1b51ff:16871db4bc7:-7ffa" [ label = "rdf:rest" ];
 	"NULL" -> "base:evidenceAgainst" [ label = "owl:onProperty" ];
-	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
-	"NULL" -> "3fab922b:16870d5ed5f:-7ffa" [ label = "rdf:rest" ];
 	"NULL" -> "base:hasExplanation" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "base:hasRuleType" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
 	"NULL" -> "base:hasTheoreticalCompound" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:nonNegativeInteger" [ label = "owl:onDataRange" ];
+	"NULL" -> "a1b51ff:16871db4bc7:-7ffb" [ label = "owl:unionOf" ];
 	"NULL" -> "base:RuleType" [ label = "owl:onClass" ];
 	"NULL" -> "base:Hypothesis" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:hasCertaintyLevel" [ label = "owl:onProperty" ];
@@ -50,9 +50,9 @@ node [shape = rectangle, color="orange"]; "base:TheoreticalCompound" "base:CLAwi
 	"NULL" -> "base:retentionTime" [ label = "owl:onProperty" ];
 	"NULL" -> "base:additionalInformation" [ label = "owl:onProperty" ];
 	"NULL" -> "base:retentionTimeRuleType" [ label = "owl:hasValue" ];
+	"NULL" -> "base:mass" [ label = "owl:onProperty" ];
 	"NULL" -> "skos:Collection" [ label = "rdf:first" ];
 	"NULL" -> "base:Explanation" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:mass" [ label = "owl:onProperty" ];
 	"skos:prefLabel" -> "rdfs:label" [ label = "rdfs:subPropertyOf" ];
 	"base:evidenceFor" -> "base:explanationContent" [ label = "rdfs:subPropertyOf" ];
 	"skos:narrowMatch" -> "skos:narrower" [ label = "rdfs:subPropertyOf" ];
@@ -74,7 +74,7 @@ node [shape = rectangle, color="orange"]; "base:TheoreticalCompound" "base:CLAwi
 	"owl:Thing" -> "base:EmpiricalCompound" [ label = "base:hasEmpiricalCompound" ];
 	"base:Explanation" -> "xsd:string" [ label = "base:explanationContent" ];
 	"owl:Thing" -> "base:TheoreticalCompound" [ label = "base:hasTheoreticalCompound" ];
-	"skos:Collection" -> "3fab922b:16870d5ed5f:-7ffc" [ label = "skos:member" ];
+	"skos:Collection" -> "a1b51ff:16871db4bc7:-7ffc" [ label = "skos:member" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:adduct" ];
 	"base:CLAwithExplanations" -> "base:CertaintyLevel" [ label = "base:hasCertaintyLevel" ];
 	"owl:Thing" -> "base:Explanation" [ label = "base:hasExplanation" ];

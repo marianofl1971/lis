@@ -1,5 +1,8 @@
 <https://w3id.org/def/lis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/def/lis> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<https://w3id.org/def/lis> <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es .
+<https://w3id.org/def/lis> <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es .
+<https://w3id.org/def/lis> <http://purl.org/dc/terms/title> "Ontology for the Lipid Identification Service (LIS)"@en .
 <https://w3id.org/def/lis> <http://www.w3.org/2000/01/rdf-schema#comment> "This is is the ontology assumed by the <a href=\"https://marianofl1971@bitbucket.org/marianofl1971/mediatorkbservice.git\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
 # 
 # 
