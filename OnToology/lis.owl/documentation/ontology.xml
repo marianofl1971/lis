@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/lis#"
+     xml:base="https://w3id.org/def/lis"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/lis">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:comment xml:lang="en">This is is the ontology assumed by the &lt;a href=&quot;https://marianofl1971@bitbucket.org/marianofl1971/mediatorkbservice.git&quot; Lipid Identification Service (LIS)&lt;/a&gt;. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/lis#hasCertaintyLevel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasCertaintyLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#CLAwithExplanations"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">It relates certainty assignments with explanations to certainty levels.</rdfs:comment>
+        <rdfs:label xml:lang="en">has certainty level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasEmpiricalCompound -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasEmpiricalCompound">
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#EmpiricalCompound"/>
+        <rdfs:comment xml:lang="en">It is the relation between entities (e.g. hypotheses) and empirical compounds.</rdfs:comment>
+        <rdfs:label xml:lang="en">has certainty level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasExplanation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasExplanation">
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:comment xml:lang="en">It relates entities (e.g. certainty level assignments with explanations) to explanations.</rdfs:comment>
+        <rdfs:label xml:lang="en">has explanation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasHypothesis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasHypothesis">
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#Hypothesis"/>
+        <rdfs:comment xml:lang="en">It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and hypotheses.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasIonizationMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasIonizationMode">
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Experiment"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#IonizationMode"/>
+        <rdfs:comment xml:lang="en">It relates experiments with ionization modes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has ionization mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasModifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasModifier">
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Experiment"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:comment xml:lang="en">It relates experiments with modifieres.</rdfs:comment>
+        <rdfs:label xml:lang="en">has modifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasRuleType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasRuleType">
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#RuleType"/>
+        <rdfs:comment xml:lang="en">It relates explanations to rule types.</rdfs:comment>
+        <rdfs:label xml:lang="en">has rule type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#hasTheoreticalCompound -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasTheoreticalCompound">
+        <rdfs:range rdf:resource="https://w3id.org/def/lis#TheoreticalCompound"/>
+        <rdfs:comment xml:lang="en">It is the relation between entities (e.g. hypotheses) and theoretical compounds.</rdfs:comment>
+        <rdfs:label xml:lang="en">has theoretical compound</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/lis#additionalInformation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#additionalInformation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/lis#explanationContent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates an explanation of ionization rule to its additional information.</rdfs:comment>
+        <rdfs:label xml:lang="en">additional information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#adduct -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#adduct">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates an entity (e.g. a hypothesis) with a string representing a compound playing the role of adduct.</rdfs:comment>
+        <rdfs:label xml:lang="en">adduct</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#coreInformation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#coreInformation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/lis#explanationContent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates an explanation to its core information.</rdfs:comment>
+        <rdfs:label xml:lang="en">core information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#evidenceAgainst -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#evidenceAgainst">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/lis#explanationContent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates a retention time rule explanation to an evidence against.</rdfs:comment>
+        <rdfs:label xml:lang="en">evident against</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#evidenceFor -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#evidenceFor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/lis#explanationContent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates a retention time rule explanation to an evidence for.</rdfs:comment>
+        <rdfs:label xml:lang="en">evidence for</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#explanationContent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#explanationContent">
+        <rdfs:domain rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates an explanation with a string.</rdfs:comment>
+        <rdfs:label xml:lang="en">explanation content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#identifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">It allows selecting an entity unequivocally.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#mass -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#mass">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates  an entity (e.g. an empirical compound) to its mass.</rdfs:comment>
+        <rdfs:label xml:lang="en">mass</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Each fact instantiating this property relates an entity (e.g. a theoretical compound) to its name.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/lis#retentionTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/lis#retentionTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/lis#ARRExplanation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#ARRExplanation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasRuleType"/>
+                <owl:hasValue rdf:resource="https://w3id.org/def/lis#adductRelationRuleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Explanation of the execution of an adduct relation rule.</rdfs:comment>
+        <rdfs:label xml:lang="en">adduct relation rule explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#CLAwithExplanations -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#CLAwithExplanations">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasExplanation"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/lis#Explanation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasCertaintyLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasHypothesis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#Hypothesis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is refification of a ternary relation.</rdfs:comment>
+        <rdfs:label xml:lang="en">certainty level assignment with explanations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#CertaintyLevel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#CertaintyLevel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The certainty levels can be impossible, improbable, possible, expected or sure.</rdfs:comment>
+        <rdfs:label xml:lang="en">certainty level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#EmpiricalCompound -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#EmpiricalCompound">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#mass"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#retentionTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An empirical compound is characterised by a mass a retention time. Below is presented an example of empirical compound in JSON:
+&lt;code&gt;
+    &quot;empiricalCompound&quot;: {
+      &quot;mass&quot;: 425.3504,
+      &quot;retentionTime&quot;: 19.5463,
+     }
+&lt;/code&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">empirical compound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#Experiment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#Experiment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasHypothesis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/lis#Hypothesis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An experiment is made up by a collection of hypotheses.</rdfs:comment>
+        <rdfs:label xml:lang="en">experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#Explanation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#Explanation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasRuleType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#RuleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#coreInformation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information.</rdfs:comment>
+        <rdfs:label xml:lang="en">explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#Hypothesis -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#Hypothesis">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasTheoreticalCompound"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#TheoreticalCompound"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#adduct"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct.</rdfs:comment>
+        <rdfs:label xml:lang="en">hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#IRExplanation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#IRExplanation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasRuleType"/>
+                <owl:hasValue rdf:resource="https://w3id.org/def/lis#ionizationRuleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#additionalInformation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information.</rdfs:comment>
+        <rdfs:label xml:lang="en">ionization rule explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#IonizationMode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#IonizationMode">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">It can be positive or negative.</rdfs:comment>
+        <rdfs:label xml:lang="en">ionization mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#Modifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#Modifier">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">It is a substance that plays the role of modifier in an experiment. The possible modifieres are
+&lt;ul&gt;
+&lt;li&gt;note;&lt;/li&gt;
+&lt;li&gt;NH3;&lt;/li&gt;
+&lt;li&gt;HCOO;&lt;/li&gt;
+&lt;li&gt;CH3COO;&lt;/li&gt;
+&lt;li&gt;HCOONH3; or&lt;/li&gt;
+&lt;li&gt;CH3COONH3&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#RTRExplanation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#RTRExplanation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/lis#Explanation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasRuleType"/>
+                <owl:hasValue rdf:resource="https://w3id.org/def/lis#retentionTimeRuleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#evidenceAgainst"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#evidenceFor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both.</rdfs:comment>
+        <rdfs:label xml:lang="en">retention rule explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#RuleType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#RuleType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The rule types are ionization, adduct relation are retention time.</rdfs:comment>
+        <rdfs:label xml:lang="en">rule type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/lis#TheoreticalCompound -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/lis#TheoreticalCompound">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A theoretical compound has a name and an identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">theoretical compound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/lis#adductRelationRuleType -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#adductRelationRuleType">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
+        <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;adduct relation&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">adduct relation type rule</rdfs:label>
+        <skos:altLabel xml:lang="en">ADDUCT_RELATION</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#expected -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#expected">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;expected&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">expected</rdfs:label>
+        <skos:altLabel xml:lang="en">EXPECTED</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#impossible -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#impossible">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;impossible&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">impossible</rdfs:label>
+        <skos:altLabel xml:lang="en">IMPOSSIBLE</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#improbable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#improbable">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;improbable&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">improbable</rdfs:label>
+        <skos:altLabel xml:lang="en">IMPROBABLE</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#ionizationRuleType -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#ionizationRuleType">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
+        <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;ionization&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">ionization rule type</rdfs:label>
+        <skos:altLabel xml:lang="en">IONIZATION</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#modifierCH3COO -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#modifierCH3COO">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:comment xml:lang="en">The modifier CH3COO.</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier CH3COO</rdfs:label>
+        <skos:altLabel xml:lang="en">CH3COO</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#modifierCH3COONH3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#modifierCH3COONH3">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:comment xml:lang="en">The modifier CH3COONH3.</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier CH3COONH3</rdfs:label>
+        <skos:altLabel xml:lang="en">CH3COONH3</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#modifierHCOO -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#modifierHCOO">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:label xml:lang="en">The modifier HCOO.</rdfs:label>
+        <rdfs:label xml:lang="en">modifier HCOO</rdfs:label>
+        <skos:altLabel xml:lang="en">HCOO</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#modifierHCOONH3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#modifierHCOONH3">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:comment xml:lang="en">The modifier HCOONH3.</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier HCOONH3</rdfs:label>
+        <skos:altLabel xml:lang="en">HCOONH3</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#modifierNH3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#modifierNH3">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#Modifier"/>
+        <rdfs:comment xml:lang="en">The modifier NH3.</rdfs:comment>
+        <rdfs:label xml:lang="en">modifier NH3</rdfs:label>
+        <skos:altLabel xml:lang="en">NH3</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#negativeIonizationMode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#negativeIonizationMode">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#IonizationMode"/>
+        <rdfs:comment xml:lang="en">The negative ionization mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">negative ionization mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#positiveIonizationMode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#positiveIonizationMode">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#IonizationMode"/>
+        <rdfs:comment xml:lang="en">The positive ionization mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">positive ionization mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#possible -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#possible">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;possible&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">possible</rdfs:label>
+        <skos:altLabel xml:lang="en">POSSIBLE</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#retentionTimeRuleType -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#retentionTimeRuleType">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
+        <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;retention time&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">retention time rule type</rdfs:label>
+        <skos:altLabel xml:lang="en">RETENTION_TIME</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/lis#sure -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/lis#sure">
+        <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
+        <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;sure&lt;/i&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">sure</rdfs:label>
+        <skos:altLabel xml:lang="en">SURE</skos:altLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+
