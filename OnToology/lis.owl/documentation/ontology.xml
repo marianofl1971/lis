@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/def/lis#"
      xml:base="https://w3id.org/def/lis"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,10 +11,10 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/lis">
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:title xml:lang="en">Ontology for the Lipid Identification Service (LIS)</dc:title>
         <terms:creator xml:lang="es">Mariano Fernández López</terms:creator>
         <terms:license xml:lang="es">Creative Commons CC-BY-SA</terms:license>
-        <terms:title xml:lang="en">Ontology for the Lipid Identification Service (LIS)</terms:title>
-        <rdfs:comment xml:lang="en">This is is the ontology assumed by the &lt;a href=&quot;https://marianofl1971@bitbucket.org/marianofl1971/mediatorkbservice.git&quot; Lipid Identification Service (LIS)&lt;/a&gt;. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is is the ontology assumed by the &lt;a href=&quot;https://github.com/marianofl1971/lis&quot; Lipid Identification Service (LIS)&lt;/a&gt;. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -568,7 +569,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
         <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;adduct relation&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">adduct relation type rule</rdfs:label>
-        <skos:altLabel xml:lang="en">ADDUCT_RELATION</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -580,7 +580,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
         <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;expected&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">expected</rdfs:label>
-        <skos:altLabel xml:lang="en">EXPECTED</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -592,7 +591,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
         <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;impossible&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">impossible</rdfs:label>
-        <skos:altLabel xml:lang="en">IMPOSSIBLE</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -604,7 +602,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
         <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;improbable&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">improbable</rdfs:label>
-        <skos:altLabel xml:lang="en">IMPROBABLE</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -616,7 +613,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
         <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;ionization&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">ionization rule type</rdfs:label>
-        <skos:altLabel xml:lang="en">IONIZATION</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -710,7 +706,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
         <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;possible&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">possible</rdfs:label>
-        <skos:altLabel xml:lang="en">POSSIBLE</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -722,7 +717,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#RuleType"/>
         <rdfs:comment xml:lang="en">The type of rule &lt;i&gt;retention time&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">retention time rule type</rdfs:label>
-        <skos:altLabel xml:lang="en">RETENTION_TIME</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -734,7 +728,6 @@
         <rdf:type rdf:resource="https://w3id.org/def/lis#CertaintyLevel"/>
         <rdfs:comment xml:lang="en">The certainty level &lt;i&gt;sure&lt;/i&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">sure</rdfs:label>
-        <skos:altLabel xml:lang="en">SURE</skos:altLabel>
     </owl:NamedIndividual>
 </rdf:RDF>
 

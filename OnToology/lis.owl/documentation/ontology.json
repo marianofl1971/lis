@@ -241,6 +241,10 @@
 }, {
   "@id" : "https://w3id.org/def/lis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for the Lipid Identification Service (LIS)"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@language" : "es",
     "@value" : "Mariano Fernández López"
@@ -249,13 +253,9 @@
     "@language" : "es",
     "@value" : "Creative Commons CC-BY-SA"
   } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@language" : "en",
-    "@value" : "Ontology for the Lipid Identification Service (LIS)"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This is is the ontology assumed by the <a href=\"https://marianofl1971@bitbucket.org/marianofl1971/mediatorkbservice.git\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."
+    "@value" : "This is is the ontology assumed by the <a href=\"https://github.com/marianofl1971/lis\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core"
@@ -514,10 +514,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "adduct relation type rule"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "ADDUCT_RELATION"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#coreInformation",
@@ -589,10 +585,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "expected"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "EXPECTED"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#explanationContent",
@@ -756,10 +748,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "impossible"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "IMPOSSIBLE"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#improbable",
@@ -771,10 +759,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "improbable"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "IMPROBABLE"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#ionizationRuleType",
@@ -786,10 +770,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ionization rule type"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "IONIZATION"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#mass",
@@ -925,10 +905,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "possible"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "POSSIBLE"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#retentionTime",
@@ -946,10 +922,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "retention time rule type"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "RETENTION_TIME"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#sure",
@@ -961,9 +933,5 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "sure"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "SURE"
   } ]
 } ]
