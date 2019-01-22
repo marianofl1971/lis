@@ -196,7 +196,7 @@
 ###  https://w3id.org/def/lis#CertaintyLevel
 :CertaintyLevel rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                rdfs:comment "The certainty levels can be impossible, improbable, possible, expected or sure."@en ;
+                rdfs:comment "The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_."@en ;
                 rdfs:label "certainty level"@en .
 
 
@@ -306,14 +306,12 @@
 :Modifier rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
           rdfs:comment """It is a substance that plays the role of modifier in an experiment. The possible modifieres are
-<ul>
-<li>note;</li>
-<li>NH3;</li>
-<li>HCOO;</li>
-<li>CH3COO;</li>
-<li>HCOONH3; or</li>
-<li>CH3COONH3</li>
-</ul>"""@en ;
+
+- NH3;
+- HCOO;
+- CH3COO;
+- HCOONH3; or
+- CH3COONH3"""@en ;
           rdfs:label "modifier"@en .
 
 
