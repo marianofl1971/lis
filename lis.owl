@@ -29,7 +29,7 @@
 :hasEmpiricalCompound rdf:type owl:ObjectProperty ;
                       rdfs:range :EmpiricalCompound ;
                       rdfs:comment "It is the relation between entities (e.g. hypotheses) and empirical compounds."@en ;
-                      rdfs:label "has certainty level"@en .
+                      rdfs:label "has empirical compound"@en .
 
 
 ###  https://w3id.org/def/lis#hasExplanation
@@ -189,7 +189,7 @@
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onClass :Hypothesis
                                      ] ;
-                     rdfs:comment "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is refification of a ternary relation."@en ;
+                     rdfs:comment "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation."@en ;
                      rdfs:label "certainty level assignment with explanations"@en .
 
 
@@ -212,11 +212,11 @@
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:double
                                    ] ;
-                   rdfs:comment """An empirical compound is characterised by a mass a retention time. Below is presented an example of empirical compound in JSON:
+                   rdfs:comment """An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON:
 <code>
     \"empiricalCompound\": {
       \"mass\": 425.3504,
-      \"retentionTime\": 19.5463,
+      \"retentionTime\": 19.5463
      }
 </code>"""@en ;
                    rdfs:label "empirical compound"@en .
@@ -256,6 +256,11 @@
 ###  https://w3id.org/def/lis#Hypothesis
 :Hypothesis rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEmpiricalCompound ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :EmpiricalCompound
+                            ] ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTheoreticalCompound ;
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onClass :TheoreticalCompound
