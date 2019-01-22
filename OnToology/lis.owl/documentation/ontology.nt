@@ -1,9 +1,9 @@
 <https://w3id.org/def/lis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/def/lis> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<https://w3id.org/def/lis> <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Identification Service (LIS)"@en .
 <https://w3id.org/def/lis> <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es .
 <https://w3id.org/def/lis> <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es .
-<https://w3id.org/def/lis> <http://purl.org/dc/terms/title> "Ontology for the Lipid Identification Service (LIS)"@en .
-<https://w3id.org/def/lis> <http://www.w3.org/2000/01/rdf-schema#comment> "This is is the ontology assumed by the <a href=\"https://marianofl1971@bitbucket.org/marianofl1971/mediatorkbservice.git\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
+<https://w3id.org/def/lis> <http://www.w3.org/2000/01/rdf-schema#comment> "This is is the ontology assumed by the <a href=\"https://github.com/marianofl1971/lis\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
 # 
 # 
 # #################################################################
@@ -331,35 +331,30 @@ _:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
 <https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>adduct relation</i>."@en .
 <https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "adduct relation type rule"@en .
-<https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/2004/02/skos/core#altLabel> "ADDUCT_RELATION"@en .
 # 
 # https://w3id.org/def/lis#expected
 <https://w3id.org/def/lis#expected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#expected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
 <https://w3id.org/def/lis#expected> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>expected</i>."@en .
 <https://w3id.org/def/lis#expected> <http://www.w3.org/2000/01/rdf-schema#label> "expected"@en .
-<https://w3id.org/def/lis#expected> <http://www.w3.org/2004/02/skos/core#altLabel> "EXPECTED"@en .
 # 
 # https://w3id.org/def/lis#impossible
 <https://w3id.org/def/lis#impossible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#impossible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
 <https://w3id.org/def/lis#impossible> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>impossible</i>."@en .
 <https://w3id.org/def/lis#impossible> <http://www.w3.org/2000/01/rdf-schema#label> "impossible"@en .
-<https://w3id.org/def/lis#impossible> <http://www.w3.org/2004/02/skos/core#altLabel> "IMPOSSIBLE"@en .
 # 
 # https://w3id.org/def/lis#improbable
 <https://w3id.org/def/lis#improbable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#improbable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
 <https://w3id.org/def/lis#improbable> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>improbable</i>."@en .
 <https://w3id.org/def/lis#improbable> <http://www.w3.org/2000/01/rdf-schema#label> "improbable"@en .
-<https://w3id.org/def/lis#improbable> <http://www.w3.org/2004/02/skos/core#altLabel> "IMPROBABLE"@en .
 # 
 # https://w3id.org/def/lis#ionizationRuleType
 <https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
 <https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>ionization</i>."@en .
 <https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "ionization rule type"@en .
-<https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/2004/02/skos/core#altLabel> "IONIZATION"@en .
 # 
 # https://w3id.org/def/lis#modifierCH3COO
 <https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -413,20 +408,17 @@ _:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://w3id.org/def/lis#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
 <https://w3id.org/def/lis#possible> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>possible</i>."@en .
 <https://w3id.org/def/lis#possible> <http://www.w3.org/2000/01/rdf-schema#label> "possible"@en .
-<https://w3id.org/def/lis#possible> <http://www.w3.org/2004/02/skos/core#altLabel> "POSSIBLE"@en .
 # 
 # https://w3id.org/def/lis#retentionTimeRuleType
 <https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
 <https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>retention time</i>."@en .
 <https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "retention time rule type"@en .
-<https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/2004/02/skos/core#altLabel> "RETENTION_TIME"@en .
 # 
 # https://w3id.org/def/lis#sure
 <https://w3id.org/def/lis#sure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/lis#sure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
 <https://w3id.org/def/lis#sure> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>sure</i>."@en .
 <https://w3id.org/def/lis#sure> <http://www.w3.org/2000/01/rdf-schema#label> "sure"@en .
-<https://w3id.org/def/lis#sure> <http://www.w3.org/2004/02/skos/core#altLabel> "SURE"@en .
 # 
 # Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
