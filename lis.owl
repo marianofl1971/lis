@@ -213,12 +213,12 @@
                                      owl:onDataRange xsd:double
                                    ] ;
                    rdfs:comment """An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON:
-<code>
+~~~~
     \"empiricalCompound\": {
       \"mass\": 425.3504,
       \"retentionTime\": 19.5463
      }
-</code>"""@en ;
+~~~~"""@en ;
                    rdfs:label "empirical compound"@en .
 
 
