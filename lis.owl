@@ -214,10 +214,19 @@
                                    ] ;
                    rdfs:comment """An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON:
 ~~~~
-    \"empiricalCompound\": {
-      \"mass\": 425.3504,
-      \"retentionTime\": 19.5463
-     }
+{
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   \"@context\":\"https://w3id.org/def/lis#\",
+   \"@type\":\"EmpiricalCompund\",
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
 ~~~~"""@en ;
                    rdfs:label "empirical compound"@en .
 
