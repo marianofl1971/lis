@@ -204,7 +204,43 @@ and here, an example in JSON-LD:
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onClass :Hypothesis
                                      ] ;
-                     rdfs:comment "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation."@en ;
+                     rdfs:comment """A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    \"ruleType\":\"ionization_rule_type\",
+    \"trueValue\":\"impossible\",
+    \"hypothesis\": {
+      \"identifier\":81,
+      \"empiricalCompound\": {\"mass\":421.3169, \"rt\":18.8425},
+      \"theoreticalCompound\": {\"identifier\":6692, \"name\":\"PG(P-20:0/22:2(13Z,16Z))\"},
+      \"adduct\":\"M+2H\",
+      \"explanation\": {
+        \"coreInformation\":\"It is highly unlikely that the empirical compound 421.3169@18.8425 (in an experiment with positive ionization and 1) is the theoretical compound PG(P-20:0/22:2(13Z,16Z)) with adduct M+2H, which belongs to the hierarchy GP, GP04, GP0403\"
+      }
+    }
+}
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#CLAwithExplanations\",
+  
+    \"ruleType\":\"ionization_rule_type\",
+    \"trueValue\":\"impossible\",
+    \"hypothesis\": {
+      \"identifier\":81,
+      \"empiricalCompound\": {\"mass\":421.3169, \"rt\":18.8425},
+      \"theoreticalCompound\": {\"identifier\":6692, \"name\":\"PG(P-20:0/22:2(13Z,16Z))\"},
+      \"adduct\":\"M+2H\",
+      \"explanation\": {
+        \"coreInformation\":\"It is highly unlikely that the empirical compound 421.3169@18.8425 (in an experiment with positive ionization and 1) is the theoretical compound PG(P-20:0/22:2(13Z,16Z)) with adduct M+2H, which belongs to the hierarchy GP, GP04, GP0403\"
+      }
+    }
+}
+
+~~~~"""@en ;
                      rdfs:label "certainty level assignment with explanations"@en .
 
 
@@ -266,7 +302,7 @@ and here, an example in JSON-LD:
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
 ~~~~
 {
     \"identifier\": 1,
