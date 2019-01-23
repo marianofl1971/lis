@@ -169,7 +169,22 @@
                                   owl:onProperty :hasRuleType ;
                                   owl:hasValue :adductRelationRuleType
                                 ] ;
-                rdfs:comment "Explanation of the execution of an adduct relation rule."@en ;
+                rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   \"@context\":
+\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"mass\": 425.3504,
+    \"retentionTime\": 19.5463
+}
+~~~~"""@en ;
                 rdfs:label "adduct relation rule explanation"@en .
 
 
@@ -222,10 +237,10 @@
 and here, an example in JSON-LD:
 ~~~~
 {
-   \"@context\":\"https://w3id.org/def/lis#\",
-   \"@type\":\"EmpiricalCompund\",
-   \"mass\": 425.3504,
-   \"retentionTime\": 19.5463
+   \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#EmpiricalCompound\",
+    \"mass\": 425.3504,
+    \"retentionTime\": 19.5463
 }
 ~~~~"""@en ;
                    rdfs:label "empirical compound"@en .
@@ -242,7 +257,267 @@ and here, an example in JSON-LD:
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment "An experiment is made up by a collection of hypotheses."@en ;
+            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+    \"identifier\": 1,
+    \"hasIonizationMode\": \"positive\",
+    \"hasHypothesis\": [
+        {
+            \"identifier\": 3,
+            \"EmpiricalCompound\": {
+                \"mass\": 399.3367,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32675,
+                \"name\": \"L-palmitoylcarnitine\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 81,
+            \"EmpiricalCompound\": {
+                \"mass\": 421.3169,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 6692,
+                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"
+            },
+            \"adduct\": \"M+2H\"
+        },
+        {
+            \"identifier\": 82,
+            \"EmpiricalCompound\": {
+                \"mass\": 421.3169,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32675,
+                \"name\": \"L-palmitoylcarnitine\"
+            },
+            \"adduct\": \"M+Na\"
+        },
+        {
+            \"identifier\": 98,
+            \"EmpiricalCompound\": {
+                \"mass\": 315.2424,
+                \"retentionTime\": 8.1449
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32602,
+                \"name\": \"O-decanoyl-R-carnitine\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 104,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 26629,
+                \"name\": \"14,17-Octadecadienoic acidentifier \"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 205,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31528,
+                \"name\": \"11-Hexadecynyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 296,
+            \"EmpiricalCompound\": {
+                \"mass\": 495.3352,
+                \"retentionTime\": 19.4689
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 2628,
+                \"name\": \"PC(O-14:0/2:0)\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 315,
+            \"EmpiricalCompound\": {
+                \"mass\": 517.3172,
+                \"retentionTime\": 19.4689
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 2628,
+                \"name\": \"PC(O-14:0/2:0)\"
+            },
+            \"adduct\": \"M+Na\"
+        },
+        {
+            \"identifier\": 187,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31499,
+                \"name\": \"10E,12E-Hexadecadienyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 496,
+            \"EmpiricalCompound\": {
+                \"mass\": 282.2563,
+                \"retentionTime\": 31.2616
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31512,
+                \"name\": \"10Z-Hexadecenyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        }
+    ]
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#Experiment\",
+  
+    \"identifier\": 1,
+    \"hasIonizationMode\": \"positive\",
+    \"hasHypothesis\": [
+        {
+            \"identifier\": 3,
+            \"EmpiricalCompound\": {
+                \"mass\": 399.3367,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32675,
+                \"name\": \"L-palmitoylcarnitine\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 81,
+            \"EmpiricalCompound\": {
+                \"mass\": 421.3169,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 6692,
+                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"
+            },
+            \"adduct\": \"M+2H\"
+        },
+        {
+            \"identifier\": 82,
+            \"EmpiricalCompound\": {
+                \"mass\": 421.3169,
+                \"retentionTime\": 18.8425
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32675,
+                \"name\": \"L-palmitoylcarnitine\"
+            },
+            \"adduct\": \"M+Na\"
+        },
+        {
+            \"identifier\": 98,
+            \"EmpiricalCompound\": {
+                \"mass\": 315.2424,
+                \"retentionTime\": 8.1449
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 32602,
+                \"name\": \"O-decanoyl-R-carnitine\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 104,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 26629,
+                \"name\": \"14,17-Octadecadienoic acidentifier \"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 205,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31528,
+                \"name\": \"11-Hexadecynyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 296,
+            \"EmpiricalCompound\": {
+                \"mass\": 495.3352,
+                \"retentionTime\": 19.4689
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 2628,
+                \"name\": \"PC(O-14:0/2:0)\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 315,
+            \"EmpiricalCompound\": {
+                \"mass\": 517.3172,
+                \"retentionTime\": 19.4689
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 2628,
+                \"name\": \"PC(O-14:0/2:0)\"
+            },
+            \"adduct\": \"M+Na\"
+        },
+        {
+            \"identifier\": 187,
+            \"EmpiricalCompound\": {
+                \"mass\": 280.2402,
+                \"retentionTime\": 28.2695
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31499,
+                \"name\": \"10E,12E-Hexadecadienyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        },
+        {
+            \"identifier\": 496,
+            \"EmpiricalCompound\": {
+                \"mass\": 282.2563,
+                \"retentionTime\": 31.2616
+            },
+            \"TheoreticalCompound\": {
+                \"identifier\": 31512,
+                \"name\": \"10Z-Hexadecenyl acetate\"
+            },
+            \"adduct\": \"M+H\"
+        }
+    ]
+}
+~~~~"""@en ;
             rdfs:label "experiment"@en .
 
 
@@ -258,7 +533,22 @@ and here, an example in JSON-LD:
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:string
                              ] ;
-             rdfs:comment "Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information."@en ;
+             rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   \"@context\":
+\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"mass\": 425.3504,
+    \"retentionTime\": 19.5463
+}
+~~~~"""@en ;
              rdfs:label "explanation"@en .
 
 
@@ -284,7 +574,39 @@ and here, an example in JSON-LD:
                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:string
                             ] ;
-            rdfs:comment "A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct."@en ;
+            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+    \"identifier\": 3,
+    \"EmpiricalCompound\": {
+       \"mass\": 399.3367,
+       \"retentionTime\": 18.8425
+     },
+     \"TheoreticalCompound\": {
+        \"identifier\": 32675,
+        \"name\": \"L-palmitoylcarnitine\"
+     },
+     \"adduct\": \"M+H\"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#Hypothesis\",
+
+    \"identifier\": 3,
+    \"EmpiricalCompound\": {
+       \"mass\": 399.3367,
+       \"retentionTime\": 18.8425
+     },
+     \"TheoreticalCompound\": {
+        \"identifier\": 32675,
+        \"name\": \"L-palmitoylcarnitine\"
+     },
+     \"adduct\": \"M+H\"
+}
+~~~~"""@en ;
             rdfs:label "hypothesis"@en .
 
 
@@ -300,7 +622,22 @@ and here, an example in JSON-LD:
                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:string
                                ] ;
-               rdfs:comment "Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information."@en ;
+               rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   \"@context\":
+\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"mass\": 425.3504,
+    \"retentionTime\": 19.5463
+}
+~~~~"""@en ;
                rdfs:label "ionization rule explanation"@en .
 
 
@@ -341,7 +678,22 @@ and here, an example in JSON-LD:
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
                                 ] ;
-                rdfs:comment "Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both."@en ;
+                rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+   \"mass\": 425.3504,
+   \"retentionTime\": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   \"@context\":
+\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"mass\": 425.3504,
+    \"retentionTime\": 19.5463
+}
+~~~~"""@en ;
                 rdfs:label "retention rule explanation"@en .
 
 
@@ -364,7 +716,22 @@ and here, an example in JSON-LD:
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:string
                                      ] ;
-                     rdfs:comment "A theoretical compound has a name and an identifier."@en ;
+                     rdfs:comment """A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON:
+~~~~
+{
+    \"identifier\": 32675,
+    \"name\": \"L-palmitoylcarnitine\"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#TheoreticalCompound\",
+    \"identifier\": 32675,
+    \"name\": \"L-palmitoylcarnitine\"
+}
+~~~~"""@en ;
                      rdfs:label "theoretical compound"@en .
 
 

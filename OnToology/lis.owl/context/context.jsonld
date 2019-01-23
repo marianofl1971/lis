@@ -15,7 +15,7 @@
       "@id" : "https://w3id.org/def/lis#hasRuleType",
       "@type" : "@id"
     },
-    "EmpiricalCompound" : {
+    "empiricalCompound" : {
       "@id" : "https://w3id.org/def/lis#EmpiricalCompound"
     },
     "additionalInformation" : {
@@ -43,10 +43,10 @@
     "Concept" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "RTRExplanation" : {
+    "rtrExplanation" : {
       "@id" : "https://w3id.org/def/lis#RTRExplanation"
     },
-    "Hypothesis" : {
+    "hypothesis" : {
       "@id" : "https://w3id.org/def/lis#Hypothesis"
     },
     "creator" : {
@@ -60,10 +60,10 @@
       "@id" : "https://w3id.org/def/lis#name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "IonizationMode" : {
+    "ionizationMode" : {
       "@id" : "https://w3id.org/def/lis#IonizationMode"
     },
-    "TheoreticalCompound" : {
+    "theoreticalCompound" : {
       "@id" : "https://w3id.org/def/lis#TheoreticalCompound"
     },
     "identifier" : {
@@ -73,20 +73,20 @@
       "@id" : "https://w3id.org/def/lis#evidenceFor",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "CLAwithExplanations" : {
+    "claWithExplanations" : {
       "@id" : "https://w3id.org/def/lis#CLAwithExplanations"
     },
     "retentionTime" : {
       "@id" : "https://w3id.org/def/lis#retentionTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
-    "IRExplanation" : {
+    "irExplanation" : {
       "@id" : "https://w3id.org/def/lis#IRExplanation"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
-    "Explanation" : {
+    "explanation" : {
       "@id" : "https://w3id.org/def/lis#Explanation"
     },
     "coreInformation" : {
@@ -101,7 +101,7 @@
       "@id" : "https://w3id.org/def/lis#hasCertaintyLevel",
       "@type" : "@id"
     },
-    "ARRExplanation" : {
+    "arrExplanation" : {
       "@id" : "https://w3id.org/def/lis#ARRExplanation"
     },
     "mass" : {
@@ -111,24 +111,24 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "Modifier" : {
+    "modifier" : {
       "@id" : "https://w3id.org/def/lis#Modifier"
     },
     "hasIonizationMode" : {
       "@id" : "https://w3id.org/def/lis#hasIonizationMode",
       "@type" : "@id"
     },
-    "CertaintyLevel" : {
+    "certaintyLevel" : {
       "@id" : "https://w3id.org/def/lis#CertaintyLevel"
     },
-    "Experiment" : {
+    "experiment" : {
       "@id" : "https://w3id.org/def/lis#Experiment"
     },
     "hasEmpiricalCompound" : {
       "@id" : "https://w3id.org/def/lis#hasEmpiricalCompound",
       "@type" : "@id"
     },
-    "RuleType" : {
+    "ruleType" : {
       "@id" : "https://w3id.org/def/lis#RuleType"
     }
   }
