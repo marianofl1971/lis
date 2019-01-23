@@ -227,7 +227,7 @@ and here, an example in JSON-LD:
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:double
                                    ] ;
-                   rdfs:comment """An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON:
+                   rdfs:comment """An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
    \"mass\": 425.3504,
@@ -257,11 +257,12 @@ and here, an example in JSON-LD:
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON:
+            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"identifier\": 1,
     \"hasIonizationMode\": \"positive\",
+    \"hasModifier\": \"modifier_NH3\",
     \"hasHypothesis\": [
         {
             \"identifier\": 3,
@@ -395,6 +396,7 @@ and here, an example in JSON-LD:
   
     \"identifier\": 1,
     \"hasIonizationMode\": \"positive\",
+    \"hasModifier\": \"modifier_NH3\",
     \"hasHypothesis\": [
         {
             \"identifier\": 3,
@@ -576,7 +578,7 @@ and here, an example in JSON-LD:
                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:string
                             ] ;
-            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON:
+            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"identifier\": 3,
@@ -718,7 +720,7 @@ and here, an example in JSON-LD:
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:string
                                      ] ;
-                     rdfs:comment """A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON:
+                     rdfs:comment """A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"identifier\": 32675,
