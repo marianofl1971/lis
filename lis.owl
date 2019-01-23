@@ -265,11 +265,11 @@ and here, an example in JSON-LD:
     \"hasHypothesis\": [
         {
             \"identifier\": 3,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 399.3367,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32675,
                 \"name\": \"L-palmitoylcarnitine\"
             },
@@ -277,11 +277,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 81,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 421.3169,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 6692,
                 \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"
             },
@@ -289,11 +289,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 82,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 421.3169,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32675,
                 \"name\": \"L-palmitoylcarnitine\"
             },
@@ -301,11 +301,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 98,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 315.2424,
                 \"retentionTime\": 8.1449
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32602,
                 \"name\": \"O-decanoyl-R-carnitine\"
             },
@@ -313,23 +313,23 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 104,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 26629,
-                \"name\": \"14,17-Octadecadienoic acidentifier \"
+                \"name\": \"14,17-Octadecadienoic acid \"
             },
             \"adduct\": \"M+H\"
         },
         {
             \"identifier\": 205,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31528,
                 \"name\": \"11-Hexadecynyl acetate\"
             },
@@ -337,11 +337,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 296,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 495.3352,
                 \"retentionTime\": 19.4689
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 2628,
                 \"name\": \"PC(O-14:0/2:0)\"
             },
@@ -349,11 +349,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 315,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 517.3172,
                 \"retentionTime\": 19.4689
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 2628,
                 \"name\": \"PC(O-14:0/2:0)\"
             },
@@ -361,11 +361,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 187,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31499,
                 \"name\": \"10E,12E-Hexadecadienyl acetate\"
             },
@@ -373,11 +373,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 496,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 282.2563,
                 \"retentionTime\": 31.2616
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31512,
                 \"name\": \"10Z-Hexadecenyl acetate\"
             },
@@ -385,6 +385,7 @@ and here, an example in JSON-LD:
         }
     ]
 }
+
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
@@ -397,11 +398,11 @@ and here, an example in JSON-LD:
     \"hasHypothesis\": [
         {
             \"identifier\": 3,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 399.3367,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32675,
                 \"name\": \"L-palmitoylcarnitine\"
             },
@@ -409,11 +410,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 81,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 421.3169,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 6692,
                 \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"
             },
@@ -421,11 +422,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 82,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 421.3169,
                 \"retentionTime\": 18.8425
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32675,
                 \"name\": \"L-palmitoylcarnitine\"
             },
@@ -433,11 +434,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 98,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 315.2424,
                 \"retentionTime\": 8.1449
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 32602,
                 \"name\": \"O-decanoyl-R-carnitine\"
             },
@@ -445,23 +446,23 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 104,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 26629,
-                \"name\": \"14,17-Octadecadienoic acidentifier \"
+                \"name\": \"14,17-Octadecadienoic acid \"
             },
             \"adduct\": \"M+H\"
         },
         {
             \"identifier\": 205,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31528,
                 \"name\": \"11-Hexadecynyl acetate\"
             },
@@ -469,11 +470,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 296,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 495.3352,
                 \"retentionTime\": 19.4689
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 2628,
                 \"name\": \"PC(O-14:0/2:0)\"
             },
@@ -481,11 +482,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 315,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 517.3172,
                 \"retentionTime\": 19.4689
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 2628,
                 \"name\": \"PC(O-14:0/2:0)\"
             },
@@ -493,11 +494,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 187,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 280.2402,
                 \"retentionTime\": 28.2695
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31499,
                 \"name\": \"10E,12E-Hexadecadienyl acetate\"
             },
@@ -505,11 +506,11 @@ and here, an example in JSON-LD:
         },
         {
             \"identifier\": 496,
-            \"EmpiricalCompound\": {
+            \"empiricalCompound\": {
                 \"mass\": 282.2563,
                 \"retentionTime\": 31.2616
             },
-            \"TheoreticalCompound\": {
+            \"theoreticalCompound\": {
                 \"identifier\": 31512,
                 \"name\": \"10Z-Hexadecenyl acetate\"
             },
@@ -517,6 +518,7 @@ and here, an example in JSON-LD:
         }
     ]
 }
+
 ~~~~"""@en ;
             rdfs:label "experiment"@en .
 
@@ -578,11 +580,11 @@ and here, an example in JSON-LD:
 ~~~~
 {
     \"identifier\": 3,
-    \"EmpiricalCompound\": {
+    \"empiricalCompound\": {
        \"mass\": 399.3367,
        \"retentionTime\": 18.8425
      },
-     \"TheoreticalCompound\": {
+     \"theoreticalCompound\": {
         \"identifier\": 32675,
         \"name\": \"L-palmitoylcarnitine\"
      },
@@ -596,11 +598,11 @@ and here, an example in JSON-LD:
     \"@type\": \"https://w3id.org/def/lis#Hypothesis\",
 
     \"identifier\": 3,
-    \"EmpiricalCompound\": {
+    \"empiricalCompound\": {
        \"mass\": 399.3367,
        \"retentionTime\": 18.8425
      },
-     \"TheoreticalCompound\": {
+     \"theoreticalCompound\": {
         \"identifier\": 32675,
         \"name\": \"L-palmitoylcarnitine\"
      },
