@@ -14,7 +14,7 @@
         <dc:title xml:lang="en">Ontology for the Lipid Identification Service (LIS)</dc:title>
         <terms:creator xml:lang="es">Mariano Fernández López</terms:creator>
         <terms:license xml:lang="es">Creative Commons CC-BY-SA</terms:license>
-        <rdfs:comment xml:lang="en">This is is the ontology assumed by the &lt;a href=&quot;https://github.com/marianofl1971/lis&quot; Lipid Identification Service (LIS)&lt;/a&gt;. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/).</rdfs:comment>
     </owl:Ontology>
     
 
@@ -49,7 +49,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/lis#hasEmpiricalCompound">
         <rdfs:range rdf:resource="https://w3id.org/def/lis#EmpiricalCompound"/>
         <rdfs:comment xml:lang="en">It is the relation between entities (e.g. hypotheses) and empirical compounds.</rdfs:comment>
-        <rdfs:label xml:lang="en">has certainty level</rdfs:label>
+        <rdfs:label xml:lang="en">has empirical compound</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -275,7 +275,42 @@
                 <owl:hasValue rdf:resource="https://w3id.org/def/lis#adductRelationRuleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Explanation of the execution of an adduct relation rule.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+  {
+    &quot;ruleType&quot;:&quot;adduct_relation_type&quot;,
+    &quot;trueValue&quot;:&quot;expected&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:315,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:517.3172, &quot;rt&quot;:19.4689},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:2628, &quot;name&quot;:&quot;PC(O-14:0/2:0)&quot;},
+      &quot;adduct&quot;:&quot;M+Na&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+  }
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   &quot;@context&quot;:
+&quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+ 
+    &quot;ruleType&quot;:&quot;adduct_relation_type&quot;,
+    &quot;trueValue&quot;:&quot;expected&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:315,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:517.3172, &quot;rt&quot;:19.4689},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:2628, &quot;name&quot;:&quot;PC(O-14:0/2:0)&quot;},
+      &quot;adduct&quot;:&quot;M+Na&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">adduct relation rule explanation</rdfs:label>
     </owl:Class>
     
@@ -305,7 +340,44 @@
                 <owl:onClass rdf:resource="https://w3id.org/def/lis#Hypothesis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is refification of a ternary relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    &quot;ruleType&quot;:&quot;ionization_rule_type&quot;,
+    &quot;trueValue&quot;:&quot;expected&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:315,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:517.3172, &quot;rt&quot;:19.4689},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:2628, &quot;name&quot;:&quot;PC(O-14:0/2:0)&quot;},
+      &quot;adduct&quot;:&quot;M+Na&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    &quot;@context&quot;: &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+    &quot;@type&quot;: &quot;https://w3id.org/def/lis#CLAwithExplanations&quot;,
+      &quot;ruleType&quot;:&quot;ionization_rule_type&quot;,
+    &quot;trueValue&quot;:&quot;expected&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:315,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:517.3172, &quot;rt&quot;:19.4689},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:2628, &quot;name&quot;:&quot;PC(O-14:0/2:0)&quot;},
+      &quot;adduct&quot;:&quot;M+Na&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+}
+
+~~~~
+LIS returns an array of certainty level assignments with explanations.</rdfs:comment>
         <rdfs:label xml:lang="en">certainty level assignment with explanations</rdfs:label>
     </owl:Class>
     
@@ -316,7 +388,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/lis#CertaintyLevel">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">The certainty levels can be impossible, improbable, possible, expected or sure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_.</rdfs:comment>
         <rdfs:label xml:lang="en">certainty level</rdfs:label>
     </owl:Class>
     
@@ -340,13 +412,22 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An empirical compound is characterised by a mass a retention time. Below is presented an example of empirical compound in JSON:
-&lt;code&gt;
-    &quot;empiricalCompound&quot;: {
-      &quot;mass&quot;: 425.3504,
-      &quot;retentionTime&quot;: 19.5463,
-     }
-&lt;/code&gt;</rdfs:comment>
+        <rdfs:comment xml:lang="en">An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+   &quot;mass&quot;: 425.3504,
+   &quot;retentionTime&quot;: 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   &quot;@context&quot;: &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+    &quot;@type&quot;: &quot;https://w3id.org/def/lis#EmpiricalCompound&quot;,
+    &quot;mass&quot;: 425.3504,
+    &quot;retentionTime&quot;: 19.5463
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">empirical compound</rdfs:label>
     </owl:Class>
     
@@ -364,12 +445,291 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasIonizationMode"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/lis#IonizationMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasModifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#Modifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/lis#identifier"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An experiment is made up by a collection of hypotheses.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+~~~~
+{
+    &quot;identifier&quot;: 1,
+    &quot;hasIonizationMode&quot;: &quot;positive&quot;,
+    &quot;hasModifier&quot;: &quot;modifier_NH3&quot;,
+    &quot;hasHypothesis&quot;: [
+        {
+            &quot;identifier&quot;: 3,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 399.3367,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32675,
+                &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 81,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 421.3169,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 6692,
+                &quot;name&quot;: &quot;PG(P-20:0/22:2(13Z,16Z))&quot;
+            },
+            &quot;adduct&quot;: &quot;M+2H&quot;
+        },
+        {
+            &quot;identifier&quot;: 82,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 421.3169,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32675,
+                &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+Na&quot;
+        },
+        {
+            &quot;identifier&quot;: 98,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 315.2424,
+                &quot;retentionTime&quot;: 8.1449
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32602,
+                &quot;name&quot;: &quot;O-decanoyl-R-carnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 104,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 26629,
+                &quot;name&quot;: &quot;14,17-Octadecadienoic acid &quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 205,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31528,
+                &quot;name&quot;: &quot;11-Hexadecynyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 296,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 495.3352,
+                &quot;retentionTime&quot;: 19.4689
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 2628,
+                &quot;name&quot;: &quot;PC(O-14:0/2:0)&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 315,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 517.3172,
+                &quot;retentionTime&quot;: 19.4689
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 2628,
+                &quot;name&quot;: &quot;PC(O-14:0/2:0)&quot;
+            },
+            &quot;adduct&quot;: &quot;M+Na&quot;
+        },
+        {
+            &quot;identifier&quot;: 187,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31499,
+                &quot;name&quot;: &quot;10E,12E-Hexadecadienyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 496,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 282.2563,
+                &quot;retentionTime&quot;: 31.2616
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31512,
+                &quot;name&quot;: &quot;10Z-Hexadecenyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        }
+    ]
+}
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    &quot;@context&quot;: &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+    &quot;@type&quot;: &quot;https://w3id.org/def/lis#Experiment&quot;,
+
+    &quot;identifier&quot;: 1,
+    &quot;hasIonizationMode&quot;: &quot;positive&quot;,
+    &quot;hasModifier&quot;: &quot;modifier_NH3&quot;,
+    &quot;hasHypothesis&quot;: [
+        {
+            &quot;identifier&quot;: 3,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 399.3367,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32675,
+                &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 81,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 421.3169,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 6692,
+                &quot;name&quot;: &quot;PG(P-20:0/22:2(13Z,16Z))&quot;
+            },
+            &quot;adduct&quot;: &quot;M+2H&quot;
+        },
+        {
+            &quot;identifier&quot;: 82,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 421.3169,
+                &quot;retentionTime&quot;: 18.8425
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32675,
+                &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+Na&quot;
+        },
+        {
+            &quot;identifier&quot;: 98,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 315.2424,
+                &quot;retentionTime&quot;: 8.1449
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 32602,
+                &quot;name&quot;: &quot;O-decanoyl-R-carnitine&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 104,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 26629,
+                &quot;name&quot;: &quot;14,17-Octadecadienoic acid &quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 205,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31528,
+                &quot;name&quot;: &quot;11-Hexadecynyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 296,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 495.3352,
+                &quot;retentionTime&quot;: 19.4689
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 2628,
+                &quot;name&quot;: &quot;PC(O-14:0/2:0)&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 315,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 517.3172,
+                &quot;retentionTime&quot;: 19.4689
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 2628,
+                &quot;name&quot;: &quot;PC(O-14:0/2:0)&quot;
+            },
+            &quot;adduct&quot;: &quot;M+Na&quot;
+        },
+        {
+            &quot;identifier&quot;: 187,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 280.2402,
+                &quot;retentionTime&quot;: 28.2695
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31499,
+                &quot;name&quot;: &quot;10E,12E-Hexadecadienyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        },
+        {
+            &quot;identifier&quot;: 496,
+            &quot;empiricalCompound&quot;: {
+                &quot;mass&quot;: 282.2563,
+                &quot;retentionTime&quot;: 31.2616
+            },
+            &quot;theoreticalCompound&quot;: {
+                &quot;identifier&quot;: 31512,
+                &quot;name&quot;: &quot;10Z-Hexadecenyl acetate&quot;
+            },
+            &quot;adduct&quot;: &quot;M+H&quot;
+        }
+    ]
+  
+}
+
+~~~~
+LIS takes as input an experiment.</rdfs:comment>
         <rdfs:label xml:lang="en">experiment</rdfs:label>
     </owl:Class>
     
@@ -393,7 +753,22 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   &quot;@context&quot;:
+&quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">explanation</rdfs:label>
     </owl:Class>
     
@@ -403,6 +778,13 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/lis#Hypothesis">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasEmpiricalCompound"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/lis#EmpiricalCompound"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/lis#hasTheoreticalCompound"/>
@@ -424,7 +806,39 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    &quot;identifier&quot;: 3,
+    &quot;empiricalCompound&quot;: {
+       &quot;mass&quot;: 399.3367,
+       &quot;retentionTime&quot;: 18.8425
+     },
+     &quot;theoreticalCompound&quot;: {
+        &quot;identifier&quot;: 32675,
+        &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+     },
+     &quot;adduct&quot;: &quot;M+H&quot;
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    &quot;@context&quot;: &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+    &quot;@type&quot;: &quot;https://w3id.org/def/lis#Hypothesis&quot;,
+
+    &quot;identifier&quot;: 3,
+    &quot;empiricalCompound&quot;: {
+       &quot;mass&quot;: 399.3367,
+       &quot;retentionTime&quot;: 18.8425
+     },
+     &quot;theoreticalCompound&quot;: {
+        &quot;identifier&quot;: 32675,
+        &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+     },
+     &quot;adduct&quot;: &quot;M+H&quot;
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">hypothesis</rdfs:label>
     </owl:Class>
     
@@ -448,7 +862,23 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+    }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   &quot;@context&quot;:
+&quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">ionization rule explanation</rdfs:label>
     </owl:Class>
     
@@ -471,14 +901,12 @@
     <owl:Class rdf:about="https://w3id.org/def/lis#Modifier">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">It is a substance that plays the role of modifier in an experiment. The possible modifieres are
-&lt;ul&gt;
-&lt;li&gt;note;&lt;/li&gt;
-&lt;li&gt;NH3;&lt;/li&gt;
-&lt;li&gt;HCOO;&lt;/li&gt;
-&lt;li&gt;CH3COO;&lt;/li&gt;
-&lt;li&gt;HCOONH3; or&lt;/li&gt;
-&lt;li&gt;CH3COONH3&lt;/li&gt;
-&lt;/ul&gt;</rdfs:comment>
+
+- NH3;
+- HCOO;
+- CH3COO;
+- HCOONH3; or
+- CH3COONH3</rdfs:comment>
         <rdfs:label xml:lang="en">modifier</rdfs:label>
     </owl:Class>
     
@@ -509,7 +937,46 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+    {
+    &quot;ruleType&quot;:&quot;retention_time_rule_type&quot;,
+    &quot;trueValue&quot;:&quot;possible&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:496,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:282.2563, &quot;rt&quot;:31.2616},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:31512, &quot;name&quot;:&quot;10Z-Hexadecenyl acetate&quot;},
+      &quot;adduct&quot;:&quot;M+H&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
+      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.&quot;,
+      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.&quot;
+    }
+  }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   &quot;@context&quot;:
+&quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+  
+    &quot;ruleType&quot;:&quot;retention_time_rule_type&quot;,
+    &quot;trueValue&quot;:&quot;possible&quot;,
+    &quot;hypothesis&quot;: {
+      &quot;identifier&quot;:496,
+      &quot;empiricalCompound&quot;: {&quot;mass&quot;:282.2563, &quot;rt&quot;:31.2616},
+      &quot;theoreticalCompound&quot;: {&quot;identifier&quot;:31512, &quot;name&quot;:&quot;10Z-Hexadecenyl acetate&quot;},
+      &quot;adduct&quot;:&quot;M+H&quot;
+    },
+    &quot;explanation&quot;: {
+      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
+      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.&quot;,
+      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.&quot;
+    
+  }
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">retention rule explanation</rdfs:label>
     </owl:Class>
     
@@ -544,7 +1011,22 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A theoretical compound has a name and an identifier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    &quot;identifier&quot;: 32675,
+    &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    &quot;@context&quot;: &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
+    &quot;@type&quot;: &quot;https://w3id.org/def/lis#TheoreticalCompound&quot;,
+    &quot;identifier&quot;: 32675,
+    &quot;name&quot;: &quot;L-palmitoylcarnitine&quot;
+}
+~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">theoretical compound</rdfs:label>
     </owl:Class>
     
