@@ -750,18 +750,42 @@ and here, an example in JSON-LD:
                                 ] ;
                 rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
-{
-   \"mass\": 425.3504,
-   \"retentionTime\": 19.5463
-}
+    {
+    \"ruleType\":\"retention_time_rule_type\",
+    \"trueValue\":\"possible\",
+    \"hypothesis\": {
+      \"identifier\":496,
+      \"empiricalCompound\": {\"mass\":282.2563, \"rt\":31.2616},
+      \"theoreticalCompound\": {\"identifier\":31512, \"name\":\"10Z-Hexadecenyl acetate\"},
+      \"adduct\":\"M+H\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",
+      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.\",
+      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.\"
+    }
+  }
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
-    \"mass\": 425.3504,
-    \"retentionTime\": 19.5463
+  
+    \"ruleType\":\"retention_time_rule_type\",
+    \"trueValue\":\"possible\",
+    \"hypothesis\": {
+      \"identifier\":496,
+      \"empiricalCompound\": {\"mass\":282.2563, \"rt\":31.2616},
+      \"theoreticalCompound\": {\"identifier\":31512, \"name\":\"10Z-Hexadecenyl acetate\"},
+      \"adduct\":\"M+H\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",
+      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.\",
+      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.\"
+    
+  }
 }
 ~~~~"""@en ;
                 rdfs:label "retention rule explanation"@en .
