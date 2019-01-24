@@ -11,7 +11,7 @@
                             <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Identification Service (LIS)"@en ;
                             <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es ;
                             <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es ;
-                            rdfs:comment "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
+                            rdfs:comment "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/)."@en .
 
 #################################################################
 #    Object Properties
