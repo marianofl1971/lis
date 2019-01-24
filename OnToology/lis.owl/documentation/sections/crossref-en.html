@@ -1,5 +1,5 @@
-<h2  id="crossreference" class="list">Cross reference for LIS Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by LIS Ontology.
+<html><h2 id="crossreference" class="list">Cross reference for [LIS Ontology] classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [LIS Ontology].
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -51,7 +51,42 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#ARRExplanation</p>
       <div class="comment">
-         <span class="markdown">Explanation of the execution of an adduct relation rule.</span>
+         <span class="markdown">Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+  {
+    "ruleType":"adduct_relation_type",
+    "trueValue":"expected",
+    "hypothesis": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+  }
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+ 
+    "ruleType":"adduct_relation_type",
+    "trueValue":"expected",
+    "hypothesis": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -75,7 +110,7 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#CertaintyLevel</p>
       <div class="comment">
-          <span class="markdown">The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_.</span>
+         <span class="markdown">The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -106,7 +141,44 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#CLAwithExplanations</p>
       <div class="comment">
-         <span class="markdown">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation.</span>
+         <span class="markdown">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    "ruleType":"ionization_rule_type",
+    "trueValue":"expected",
+    "hypothesis": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#CLAwithExplanations",
+      "ruleType":"ionization_rule_type",
+    "trueValue":"expected",
+    "hypothesis": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+}
+
+~~~~
+LIS returns an array of certainty level assignments with explanations.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -144,13 +216,22 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#EmpiricalCompound</p>
       <div class="comment">
-         <span class="markdown">An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON:
-&lt;code&gt;
-    "empiricalCompound": {
-      "mass": 425.3504,
-      "retentionTime": 19.5463
-     }
-&lt;/code&gt;</span>
+         <span class="markdown">An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+   "mass": 425.3504,
+   "retentionTime": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#EmpiricalCompound",
+    "mass": 425.3504,
+    "retentionTime": 19.5463
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -164,7 +245,7 @@ This section provides details for each class and property defined by LIS Ontolog
             <span class="logic">exactly</span> 1</dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has certainty level</a>
+            <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -177,7 +258,273 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#Experiment</p>
       <div class="comment">
-         <span class="markdown">An experiment is made up by a collection of hypotheses.</span>
+         <span class="markdown">An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+~~~~
+{
+    "identifier": 1,
+    "hasIonizationMode": "positive",
+    "hasModifier": "modifier_NH3",
+    "hasHypothesis": [
+        {
+            "identifier": 3,
+            "empiricalCompound": {
+                "mass": 399.3367,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 81,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 6692,
+                "name": "PG(P-20:0/22:2(13Z,16Z))"
+            },
+            "adduct": "M+2H"
+        },
+        {
+            "identifier": 82,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 98,
+            "empiricalCompound": {
+                "mass": 315.2424,
+                "retentionTime": 8.1449
+            },
+            "theoreticalCompound": {
+                "identifier": 32602,
+                "name": "O-decanoyl-R-carnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 104,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 26629,
+                "name": "14,17-Octadecadienoic acid "
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 205,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31528,
+                "name": "11-Hexadecynyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 296,
+            "empiricalCompound": {
+                "mass": 495.3352,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 315,
+            "empiricalCompound": {
+                "mass": 517.3172,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 187,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31499,
+                "name": "10E,12E-Hexadecadienyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 496,
+            "empiricalCompound": {
+                "mass": 282.2563,
+                "retentionTime": 31.2616
+            },
+            "theoreticalCompound": {
+                "identifier": 31512,
+                "name": "10Z-Hexadecenyl acetate"
+            },
+            "adduct": "M+H"
+        }
+    ]
+}
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#Experiment",
+
+    "identifier": 1,
+    "hasIonizationMode": "positive",
+    "hasModifier": "modifier_NH3",
+    "hasHypothesis": [
+        {
+            "identifier": 3,
+            "empiricalCompound": {
+                "mass": 399.3367,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 81,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 6692,
+                "name": "PG(P-20:0/22:2(13Z,16Z))"
+            },
+            "adduct": "M+2H"
+        },
+        {
+            "identifier": 82,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 98,
+            "empiricalCompound": {
+                "mass": 315.2424,
+                "retentionTime": 8.1449
+            },
+            "theoreticalCompound": {
+                "identifier": 32602,
+                "name": "O-decanoyl-R-carnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 104,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 26629,
+                "name": "14,17-Octadecadienoic acid "
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 205,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31528,
+                "name": "11-Hexadecynyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 296,
+            "empiricalCompound": {
+                "mass": 495.3352,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 315,
+            "empiricalCompound": {
+                "mass": 517.3172,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 187,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31499,
+                "name": "10E,12E-Hexadecadienyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 496,
+            "empiricalCompound": {
+                "mass": 282.2563,
+                "retentionTime": 31.2616
+            },
+            "theoreticalCompound": {
+                "identifier": 31512,
+                "name": "10Z-Hexadecenyl acetate"
+            },
+            "adduct": "M+H"
+        }
+    ]
+  
+}
+
+~~~~
+LIS takes as input an experiment.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -186,6 +533,19 @@ This section provides details for each class and property defined by LIS Ontolog
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#Hypothesis" title="https://w3id.org/def/lis#Hypothesis">hypothesis</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasModifier" title="https://w3id.org/def/lis#hasModifier">has modifier</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -208,7 +568,22 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#Explanation</p>
       <div class="comment">
-         <span class="markdown">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information.</span>
+         <span class="markdown">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -254,10 +629,48 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#Hypothesis</p>
       <div class="comment">
-         <span class="markdown">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct.</span>
+         <span class="markdown">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    "identifier": 3,
+    "empiricalCompound": {
+       "mass": 399.3367,
+       "retentionTime": 18.8425
+     },
+     "theoreticalCompound": {
+        "identifier": 32675,
+        "name": "L-palmitoylcarnitine"
+     },
+     "adduct": "M+H"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#Hypothesis",
+
+    "identifier": 3,
+    "empiricalCompound": {
+       "mass": 399.3367,
+       "retentionTime": 18.8425
+     },
+     "theoreticalCompound": {
+        "identifier": 32675,
+        "name": "L-palmitoylcarnitine"
+     },
+     "adduct": "M+H"
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#EmpiricalCompound" title="https://w3id.org/def/lis#EmpiricalCompound">empirical compound</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dd>
             <a href="#hasTheoreticalCompound" title="https://w3id.org/def/lis#hasTheoreticalCompound">has theoretical compound</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -315,7 +728,23 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#IRExplanation</p>
       <div class="comment">
-         <span class="markdown">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information.</span>
+         <span class="markdown">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -344,14 +773,12 @@ This section provides details for each class and property defined by LIS Ontolog
          <strong>IRI:</strong> https://w3id.org/def/lis#Modifier</p>
       <div class="comment">
          <span class="markdown">It is a substance that plays the role of modifier in an experiment. The possible modifieres are
-&lt;ul&gt;
-&lt;li&gt;note;&lt;/li&gt;
-&lt;li&gt;NH3;&lt;/li&gt;
-&lt;li&gt;HCOO;&lt;/li&gt;
-&lt;li&gt;CH3COO;&lt;/li&gt;
-&lt;li&gt;HCOONH3; or&lt;/li&gt;
-&lt;li&gt;CH3COONH3&lt;/li&gt;
-&lt;/ul&gt;</span>
+
+- NH3;
+- HCOO;
+- CH3COO;
+- HCOONH3; or
+- CH3COONH3</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -382,7 +809,46 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#RTRExplanation</p>
       <div class="comment">
-         <span class="markdown">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both.</span>
+         <span class="markdown">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+    {
+    "ruleType":"retention_time_rule_type",
+    "trueValue":"possible",
+    "hypothesis": {
+      "identifier":496,
+      "empiricalCompound": {"mass":282.2563, "rt":31.2616},
+      "theoreticalCompound": {"identifier":31512, "name":"10Z-Hexadecenyl acetate"},
+      "adduct":"M+H"
+    },
+    "explanation": {
+      "coreInformation":"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond",
+      "evidenceFor":"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.",
+      "evidenceAgainst":"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond."
+    }
+  }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+  
+    "ruleType":"retention_time_rule_type",
+    "trueValue":"possible",
+    "hypothesis": {
+      "identifier":496,
+      "empiricalCompound": {"mass":282.2563, "rt":31.2616},
+      "theoreticalCompound": {"identifier":31512, "name":"10Z-Hexadecenyl acetate"},
+      "adduct":"M+H"
+    },
+    "explanation": {
+      "coreInformation":"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond",
+      "evidenceFor":"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.",
+      "evidenceAgainst":"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond."
+    
+  }
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -443,7 +909,22 @@ This section provides details for each class and property defined by LIS Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#TheoreticalCompound</p>
       <div class="comment">
-         <span class="markdown">A theoretical compound has a name and an identifier.</span>
+         <span class="markdown">A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+~~~~
+{
+    "identifier": 32675,
+    "name": "L-palmitoylcarnitine"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#TheoreticalCompound",
+    "identifier": 32675,
+    "name": "L-palmitoylcarnitine"
+}
+~~~~</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -469,7 +950,7 @@ This section provides details for each class and property defined by LIS Ontolog
          <a href="#hasCertaintyLevel" title="https://w3id.org/def/lis#hasCertaintyLevel">has certainty level</a>
       </li>
       <li>
-         <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has certainty level</a>
+         <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
       </li>
       <li>
          <a href="#hasExplanation" title="https://w3id.org/def/lis#hasExplanation">has explanation</a>
@@ -516,7 +997,7 @@ This section provides details for each class and property defined by LIS Ontolog
       </div>
    </div>
    <div class="entity" id="hasEmpiricalCompound">
-      <h3>has certainty level<sup class="type-op" title="object property">op</sup>
+      <h3>has empirical compound<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1263,3 +1744,4 @@ This section provides details for each class and property defined by LIS Ontolog
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
+</html>

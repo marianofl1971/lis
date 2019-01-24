@@ -11,6 +11,32 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/def/lis#RuleType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#hasRuleType"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
@@ -21,7 +47,20 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/def/lis#EmpiricalCompound"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#hasEmpiricalCompound"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/def/lis#TheoreticalCompound"
@@ -34,7 +73,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
@@ -47,7 +86,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -60,48 +99,13 @@
     "@id" : "https://w3id.org/def/lis#adduct"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/def/lis#ionizationRuleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/lis#hasRuleType"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#additionalInformation"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/def/lis#retentionTimeRuleType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#hasRuleType"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#evidenceAgainst"
   } ]
 }, {
   "@id" : "_:genid18",
@@ -114,20 +118,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#evidenceFor"
+    "@id" : "https://w3id.org/def/lis#additionalInformation"
   } ]
 }, {
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/def/lis#retentionTimeRuleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+    "@id" : "https://w3id.org/def/lis#hasRuleType"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -140,6 +140,45 @@
   } ]
 }, {
   "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#evidenceAgainst"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#evidenceFor"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -215,28 +254,24 @@
 }, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#identifier"
+    "@id" : "https://w3id.org/def/lis#hasIonizationMode"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/lis#IonizationMode"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/def/lis#RuleType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/lis#hasRuleType"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/def/lis#Modifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/lis#hasModifier"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis",
@@ -255,7 +290,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This is is the ontology assumed by the <a href=\"https://github.com/marianofl1971/lis\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."
+    "@value" : "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/)."
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core"
@@ -265,7 +300,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Explanation of the execution of an adduct relation rule."
+    "@value" : "Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n  {\n    \"ruleType\":\"adduct_relation_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n  }\n\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n \n    \"ruleType\":\"adduct_relation_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -281,7 +316,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is refification of a ternary relation."
+    "@value" : "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n    \"ruleType\":\"ionization_rule_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#CLAwithExplanations\",\n      \"ruleType\":\"ionization_rule_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n}\n\n~~~~\nLIS returns an array of certainty level assignments with explanations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -299,7 +334,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The certainty levels can be impossible, improbable, possible, expected or sure."
+    "@value" : "The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -313,7 +348,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An empirical compound is characterised by a mass a retention time. Below is presented an example of empirical compound in JSON:\n<code>\n    \"empiricalCompound\": {\n      \"mass\": 425.3504,\n      \"retentionTime\": 19.5463,\n     }\n</code>"
+    "@value" : "An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n   \"mass\": 425.3504,\n   \"retentionTime\": 19.5463\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#EmpiricalCompound\",\n    \"mass\": 425.3504,\n    \"retentionTime\": 19.5463\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -329,7 +364,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An experiment is made up by a collection of hypotheses."
+    "@value" : "An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:\n~~~~\n{\n    \"identifier\": 1,\n    \"hasIonizationMode\": \"positive\",\n    \"hasModifier\": \"modifier_NH3\",\n    \"hasHypothesis\": [\n        {\n            \"identifier\": 3,\n            \"empiricalCompound\": {\n                \"mass\": 399.3367,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 81,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 6692,\n                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"\n            },\n            \"adduct\": \"M+2H\"\n        },\n        {\n            \"identifier\": 82,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 98,\n            \"empiricalCompound\": {\n                \"mass\": 315.2424,\n                \"retentionTime\": 8.1449\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32602,\n                \"name\": \"O-decanoyl-R-carnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 104,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 26629,\n                \"name\": \"14,17-Octadecadienoic acid \"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 205,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31528,\n                \"name\": \"11-Hexadecynyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 296,\n            \"empiricalCompound\": {\n                \"mass\": 495.3352,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 315,\n            \"empiricalCompound\": {\n                \"mass\": 517.3172,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 187,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31499,\n                \"name\": \"10E,12E-Hexadecadienyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 496,\n            \"empiricalCompound\": {\n                \"mass\": 282.2563,\n                \"retentionTime\": 31.2616\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31512,\n                \"name\": \"10Z-Hexadecenyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        }\n    ]\n}\n\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#Experiment\",\n\n    \"identifier\": 1,\n    \"hasIonizationMode\": \"positive\",\n    \"hasModifier\": \"modifier_NH3\",\n    \"hasHypothesis\": [\n        {\n            \"identifier\": 3,\n            \"empiricalCompound\": {\n                \"mass\": 399.3367,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 81,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 6692,\n                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"\n            },\n            \"adduct\": \"M+2H\"\n        },\n        {\n            \"identifier\": 82,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 98,\n            \"empiricalCompound\": {\n                \"mass\": 315.2424,\n                \"retentionTime\": 8.1449\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32602,\n                \"name\": \"O-decanoyl-R-carnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 104,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 26629,\n                \"name\": \"14,17-Octadecadienoic acid \"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 205,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31528,\n                \"name\": \"11-Hexadecynyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 296,\n            \"empiricalCompound\": {\n                \"mass\": 495.3352,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 315,\n            \"empiricalCompound\": {\n                \"mass\": 517.3172,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 187,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31499,\n                \"name\": \"10E,12E-Hexadecadienyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 496,\n            \"empiricalCompound\": {\n                \"mass\": 282.2563,\n                \"retentionTime\": 31.2616\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31512,\n                \"name\": \"10Z-Hexadecenyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        }\n    ]\n  \n}\n\n~~~~\nLIS takes as input an experiment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -339,47 +374,53 @@
     "@id" : "_:genid7"
   }, {
     "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#Explanation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information."
+    "@value" : "Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "explanation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid9"
+    "@id" : "_:genid11"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#Hypothesis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct."
+    "@value" : "A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n    \"identifier\": 3,\n    \"empiricalCompound\": {\n       \"mass\": 399.3367,\n       \"retentionTime\": 18.8425\n     },\n     \"theoreticalCompound\": {\n        \"identifier\": 32675,\n        \"name\": \"L-palmitoylcarnitine\"\n     },\n     \"adduct\": \"M+H\"\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#Hypothesis\",\n\n    \"identifier\": 3,\n    \"empiricalCompound\": {\n       \"mass\": 399.3367,\n       \"retentionTime\": 18.8425\n     },\n     \"theoreticalCompound\": {\n        \"identifier\": 32675,\n        \"name\": \"L-palmitoylcarnitine\"\n     },\n     \"adduct\": \"M+H\"\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid11"
-  }, {
-    "@id" : "_:genid12"
-  }, {
     "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#IRExplanation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information."
+    "@value" : "Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -388,9 +429,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/lis#Explanation"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid17"
   }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#IonizationMode",
@@ -411,7 +452,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "It is a substance that plays the role of modifier in an experiment. The possible modifieres are\n<ul>\n<li>note;</li>\n<li>NH3;</li>\n<li>HCOO;</li>\n<li>CH3COO;</li>\n<li>HCOONH3; or</li>\n<li>CH3COONH3</li>\n</ul>"
+    "@value" : "It is a substance that plays the role of modifier in an experiment. The possible modifieres are\n\n- NH3;\n- HCOO;\n- CH3COO;\n- HCOONH3; or\n- CH3COONH3"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -425,7 +466,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both."
+    "@value" : "Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n    {\n    \"ruleType\":\"retention_time_rule_type\",\n    \"trueValue\":\"possible\",\n    \"hypothesis\": {\n      \"identifier\":496,\n      \"empiricalCompound\": {\"mass\":282.2563, \"rt\":31.2616},\n      \"theoreticalCompound\": {\"identifier\":31512, \"name\":\"10Z-Hexadecenyl acetate\"},\n      \"adduct\":\"M+H\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",\n      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.\",\n      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.\"\n    }\n  }\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n  \n    \"ruleType\":\"retention_time_rule_type\",\n    \"trueValue\":\"possible\",\n    \"hypothesis\": {\n      \"identifier\":496,\n      \"empiricalCompound\": {\"mass\":282.2563, \"rt\":31.2616},\n      \"theoreticalCompound\": {\"identifier\":31512, \"name\":\"10Z-Hexadecenyl acetate\"},\n      \"adduct\":\"M+H\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",\n      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.\",\n      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.\"\n    \n  }\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -434,11 +475,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/lis#Explanation"
   }, {
-    "@id" : "_:genid16"
+    "@id" : "_:genid19"
   }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid20"
   }, {
-    "@id" : "_:genid18"
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#RuleType",
@@ -459,16 +500,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A theoretical compound has a name and an identifier."
+    "@value" : "A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):\n~~~~\n{\n    \"identifier\": 32675,\n    \"name\": \"L-palmitoylcarnitine\"\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#TheoreticalCompound\",\n    \"identifier\": 32675,\n    \"name\": \"L-palmitoylcarnitine\"\n}\n~~~~"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "theoretical compound"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid22"
   }, {
-    "@id" : "_:genid20"
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "https://w3id.org/def/lis#additionalInformation",
@@ -629,7 +670,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has certainty level"
+    "@value" : "has empirical compound"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/lis#EmpiricalCompound"
