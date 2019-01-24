@@ -169,7 +169,7 @@
                                   owl:onProperty :hasRuleType ;
                                   owl:hasValue :adductRelationRuleType
                                 ] ;
-                rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON:
+                rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
    \"mass\": 425.3504,
@@ -582,20 +582,20 @@ and here, an example in JSON-LD:
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:string
                              ] ;
-             rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON:
+             rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
-   \"mass\": 425.3504,
-   \"retentionTime\": 19.5463
-}
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
+    }
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
-    \"mass\": 425.3504,
-    \"retentionTime\": 19.5463
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~"""@en ;
              rdfs:label "explanation"@en .
@@ -671,20 +671,21 @@ and here, an example in JSON-LD:
                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:string
                                ] ;
-               rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON:
+               rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
-   \"mass\": 425.3504,
-   \"retentionTime\": 19.5463
-}
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
+    }
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
-    \"mass\": 425.3504,
-    \"retentionTime\": 19.5463
+
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~"""@en ;
                rdfs:label "ionization rule explanation"@en .
@@ -727,7 +728,7 @@ and here, an example in JSON-LD:
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
                                 ] ;
-                rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON:
+                rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
    \"mass\": 425.3504,
