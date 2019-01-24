@@ -171,18 +171,38 @@
                                 ] ;
                 rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
-{
-   \"mass\": 425.3504,
-   \"retentionTime\": 19.5463
-}
+  {
+    \"ruleType\":\"adduct_relation_type\",
+    \"trueValue\":\"expected\",
+    \"hypothesis\": {
+      \"identifier\":315,
+      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
+      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
+      \"adduct\":\"M+Na\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"
+    }
+  }
+
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
-    \"mass\": 425.3504,
-    \"retentionTime\": 19.5463
+ 
+    \"ruleType\":\"adduct_relation_type\",
+    \"trueValue\":\"expected\",
+    \"hypothesis\": {
+      \"identifier\":315,
+      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
+      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
+      \"adduct\":\"M+Na\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"
+    }
 }
 ~~~~"""@en ;
                 rdfs:label "adduct relation rule explanation"@en .
