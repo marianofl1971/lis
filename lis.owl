@@ -260,7 +260,8 @@ and here, an example in JSON-LD:
     }
 }
 
-~~~~"""@en ;
+~~~~
+LIS returns an array of certainty level assignments with explanations."""@en ;
                      rdfs:label "certainty level assignment with explanations"@en .
 
 
@@ -458,7 +459,7 @@ and here, an example in JSON-LD:
 {
     \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
     \"@type\": \"https://w3id.org/def/lis#Experiment\",
-  
+
     \"identifier\": 1,
     \"hasIonizationMode\": \"positive\",
     \"hasModifier\": \"modifier_NH3\",
@@ -584,9 +585,11 @@ and here, an example in JSON-LD:
             \"adduct\": \"M+H\"
         }
     ]
+  
 }
 
-~~~~"""@en ;
+~~~~
+LIS takes as input an experiment."""@en ;
             rdfs:label "experiment"@en .
 
 
