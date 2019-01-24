@@ -11,7 +11,7 @@
                             <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Identification Service (LIS)"@en ;
                             <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es ;
                             <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es ;
-                            rdfs:comment "This is is the ontology assumed by the <a href=\"https://github.com/marianofl1971/lis\" Lipid Identification Service (LIS)</a>. It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
+                            rdfs:comment "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc."@en .
 
 #################################################################
 #    Object Properties
@@ -208,35 +208,35 @@ and here, an example in JSON-LD:
 ~~~~
 {
     \"ruleType\":\"ionization_rule_type\",
-    \"trueValue\":\"impossible\",
+    \"trueValue\":\"expected\",
     \"hypothesis\": {
-      \"identifier\":81,
-      \"empiricalCompound\": {\"mass\":421.3169, \"rt\":18.8425},
-      \"theoreticalCompound\": {\"identifier\":6692, \"name\":\"PG(P-20:0/22:2(13Z,16Z))\"},
-      \"adduct\":\"M+2H\",
-      \"explanation\": {
-        \"coreInformation\":\"It is highly unlikely that the empirical compound 421.3169@18.8425 (in an experiment with positive ionization and 1) is the theoretical compound PG(P-20:0/22:2(13Z,16Z)) with adduct M+2H, which belongs to the hierarchy GP, GP04, GP0403\"
-      }
+      \"identifier\":315,
+      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
+      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
+      \"adduct\":\"M+Na\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
     }
 }
-
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
 {
     \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
     \"@type\": \"https://w3id.org/def/lis#CLAwithExplanations\",
-  
-    \"ruleType\":\"ionization_rule_type\",
-    \"trueValue\":\"impossible\",
+      \"ruleType\":\"ionization_rule_type\",
+    \"trueValue\":\"expected\",
     \"hypothesis\": {
-      \"identifier\":81,
-      \"empiricalCompound\": {\"mass\":421.3169, \"rt\":18.8425},
-      \"theoreticalCompound\": {\"identifier\":6692, \"name\":\"PG(P-20:0/22:2(13Z,16Z))\"},
-      \"adduct\":\"M+2H\",
-      \"explanation\": {
-        \"coreInformation\":\"It is highly unlikely that the empirical compound 421.3169@18.8425 (in an experiment with positive ionization and 1) is the theoretical compound PG(P-20:0/22:2(13Z,16Z)) with adduct M+2H, which belongs to the hierarchy GP, GP04, GP0403\"
-      }
+      \"identifier\":315,
+      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
+      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
+      \"adduct\":\"M+Na\"
+    },
+    \"explanation\": {
+      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
+      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
     }
 }
 
