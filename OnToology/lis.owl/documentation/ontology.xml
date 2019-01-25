@@ -450,7 +450,7 @@ and here, an example in JSON-LD:
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An experiment is made up by a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+        <rdfs:comment xml:lang="en">An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
 ~~~~
 {
     &quot;identifier&quot;: 1,
@@ -855,14 +855,14 @@ and here, an example in JSON-LD:
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+        <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explaining this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
       &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound 
                             PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
       &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
-    }
+}
 ~~~~
 and here, an example in JSON-LD:
 ~~~~
@@ -971,7 +971,7 @@ and here, an example in JSON-LD:
 
     <owl:Class rdf:about="https://w3id.org/def/lis#RuleType">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">The rule types are ionization, adduct relation are retention time.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The rule types are ionization, adduct relation and retention time.</rdfs:comment>
         <rdfs:label xml:lang="en">rule type</rdfs:label>
     </owl:Class>
     
