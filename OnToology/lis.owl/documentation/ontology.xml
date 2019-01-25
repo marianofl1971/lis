@@ -287,7 +287,8 @@
       &quot;adduct&quot;:&quot;M+Na&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
   }
 
@@ -307,7 +308,8 @@ and here, an example in JSON-LD:
       &quot;adduct&quot;:&quot;M+Na&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
 }
 ~~~~</rdfs:comment>
@@ -352,8 +354,10 @@ and here, an example in JSON-LD:
       &quot;adduct&quot;:&quot;M+Na&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
 }
 ~~~~
@@ -371,8 +375,10 @@ and here, an example in JSON-LD:
       &quot;adduct&quot;:&quot;M+Na&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
 }
 
@@ -756,8 +762,10 @@ LIS takes as input an experiment.</rdfs:comment>
         <rdfs:comment xml:lang="en">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
 ~~~~
 and here, an example in JSON-LD:
@@ -765,8 +773,10 @@ and here, an example in JSON-LD:
 {
    &quot;@context&quot;:
 &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
 }
 ~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">explanation</rdfs:label>
@@ -865,8 +875,10 @@ and here, an example in JSON-LD:
         <rdfs:comment xml:lang="en">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound 
+                            PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
     }
 ~~~~
 and here, an example in JSON-LD:
@@ -875,8 +887,10 @@ and here, an example in JSON-LD:
    &quot;@context&quot;:
 &quot;https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld&quot;,
 
-      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
-      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
+      &quot;coreInformation&quot;:&quot;The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102&quot;,
+      &quot;additionalInformation&quot;:&quot;The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.&quot;
 }
 ~~~~</rdfs:comment>
         <rdfs:label xml:lang="en">ionization rule explanation</rdfs:label>
@@ -949,9 +963,12 @@ and here, an example in JSON-LD:
       &quot;adduct&quot;:&quot;M+H&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
-      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.&quot;,
-      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.&quot;
+      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The 
+                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
+      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ 
+                        lipid with 18 carbons and 2 double bonds.&quot;,
+      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid 
+                            with 18 carbons and no double bond.&quot;
     }
   }
 ~~~~
@@ -970,9 +987,12 @@ and here, an example in JSON-LD:
       &quot;adduct&quot;:&quot;M+H&quot;
     },
     &quot;explanation&quot;: {
-      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
-      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and 2 double bonds.&quot;,
-      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid with 18 carbons and no double bond.&quot;
+      &quot;coreInformation&quot;:&quot;It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The 
+                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond&quot;,
+      &quot;evidenceFor&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ 
+                        lipid with 18 carbons and 2 double bonds.&quot;,
+      &quot;evidenceAgainst&quot;:&quot;For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid
+                            with 18 carbons and no double bond.&quot;
     
   }
 }
