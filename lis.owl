@@ -169,10 +169,10 @@
                                   owl:onProperty :hasRuleType ;
                                   owl:hasValue :adductRelationRuleType
                                 ] ;
-                rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+                rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of adduct relation rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
   {
-    \"ruleType\":\"adduct_relation_type\",
+    \"ruleType\":\"adduct_relation_rule_type\",
     \"trueValue\":\"expected\",
     \"hypothesis\": {
       \"identifier\":315,
@@ -192,8 +192,9 @@ and here, an example in JSON-LD:
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\":\"https://w3id.org/def/lis#ARRExplanation\",
  
-    \"ruleType\":\"adduct_relation_type\",
+    \"ruleType\":\"adduct_relation_rule_type\",
     \"trueValue\":\"expected\",
     \"hypothesis\": {
       \"identifier\":315,
@@ -226,7 +227,7 @@ and here, an example in JSON-LD:
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onClass :Hypothesis
                                      ] ;
-                     rdfs:comment """A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+                     rdfs:comment """A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"ruleType\":\"ionization_rule_type\",
@@ -329,7 +330,7 @@ and here, an example in JSON-LD:
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+            rdfs:comment """An experiment is made up by a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
 ~~~~
 {
     \"identifier\": 1,
@@ -611,7 +612,7 @@ LIS takes as input an experiment."""@en ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:string
                              ] ;
-             rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+             rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
       \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
@@ -625,6 +626,8 @@ and here, an example in JSON-LD:
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+   \"@type\":\"https://w3id.org/def/lis#Explanation\",
+   
       \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
       \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
@@ -656,7 +659,7 @@ and here, an example in JSON-LD:
                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:string
                             ] ;
-            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of hypothesis in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"identifier\": 3,
@@ -704,7 +707,7 @@ and here, an example in JSON-LD:
                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:string
                                ] ;
-               rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+               rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explainint this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
       \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound 
@@ -718,6 +721,7 @@ and here, an example in JSON-LD:
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+   \"@type\":\"https://w3id.org/def/lis#IRExplanation\",
 
       \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
@@ -765,7 +769,7 @@ and here, an example in JSON-LD:
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
                                 ] ;
-                rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+                rdfs:comment """Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of retention time rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
     {
     \"ruleType\":\"retention_time_rule_type\",
@@ -791,6 +795,7 @@ and here, an example in JSON-LD:
 {
    \"@context\":
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+   \"@type\":\"https://w3id.org/def/lis#RTRExplanation\",
   
     \"ruleType\":\"retention_time_rule_type\",
     \"trueValue\":\"possible\",
@@ -833,7 +838,7 @@ and here, an example in JSON-LD:
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:string
                                      ] ;
-                     rdfs:comment """A theoretical compound has a name and an identifier. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
+                     rdfs:comment """A theoretical compound has a name and an identifier. Below is presented an example of theoretical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld):
 ~~~~
 {
     \"identifier\": 32675,
