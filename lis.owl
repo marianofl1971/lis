@@ -8,10 +8,11 @@
 
 <https://w3id.org/def/lis> rdf:type owl:Ontology ;
                             owl:imports <http://www.w3.org/2004/02/skos/core> ;
-                            <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Identification Service (LIS)"@en ;
+                            <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Annotation Service (LAS)"@en ,
+                                                                    "The IRI of the ontology maintain the original name of the service to which it provides support: LIS (Lipid Identification Service)."@en ;
                             <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es ;
                             <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es ;
-                            rdfs:comment "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/)."@en .
+                            rdfs:comment "This is is the ontology assumed by the [Lipid Annotation Service (LAS)](https://github.com/marianofl1971/lis). It defines notions like experiment, tentative annotation, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/)."@en .
 
 #################################################################
 #    Object Properties
@@ -28,7 +29,7 @@
 ###  https://w3id.org/def/lis#hasEmpiricalCompound
 :hasEmpiricalCompound rdf:type owl:ObjectProperty ;
                       rdfs:range :EmpiricalCompound ;
-                      rdfs:comment "It is the relation between entities (e.g. hypotheses) and empirical compounds."@en ;
+                      rdfs:comment "It is the relation between entities (e.g. tentative annotations) and empirical compounds."@en ;
                       rdfs:label "has empirical compound"@en .
 
 
@@ -37,13 +38,6 @@
                 rdfs:range :Explanation ;
                 rdfs:comment "It relates entities (e.g. certainty level assignments with explanations) to explanations."@en ;
                 rdfs:label "has explanation"@en .
-
-
-###  https://w3id.org/def/lis#hasHypothesis
-:hasHypothesis rdf:type owl:ObjectProperty ;
-               rdfs:range :Hypothesis ;
-               rdfs:comment "It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and hypotheses."@en ;
-               rdfs:label "has hypothesis"@en .
 
 
 ###  https://w3id.org/def/lis#hasIonizationMode
@@ -70,10 +64,17 @@
              rdfs:label "has rule type"@en .
 
 
+###  https://w3id.org/def/lis#hasTentativeAnnotation
+:hasTentativeAnnotation rdf:type owl:ObjectProperty ;
+                        rdfs:range :TentativeAnnotaion ;
+                        rdfs:comment "It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and tentative annotations."@en ;
+                        rdfs:label "has tentative annotation"@en .
+
+
 ###  https://w3id.org/def/lis#hasTheoreticalCompound
 :hasTheoreticalCompound rdf:type owl:ObjectProperty ;
                         rdfs:range :TheoreticalCompound ;
-                        rdfs:comment "It is the relation between entities (e.g. hypotheses) and theoretical compounds."@en ;
+                        rdfs:comment "It is the relation between entities (e.g. tentative annotations) and theoretical compounds."@en ;
                         rdfs:label "has theoretical compound"@en .
 
 
@@ -93,7 +94,7 @@
 ###  https://w3id.org/def/lis#adduct
 :adduct rdf:type owl:DatatypeProperty ;
         rdfs:range xsd:string ;
-        rdfs:comment "Each fact instantiating this property relates an entity (e.g. a hypothesis) with a string representing a compound playing the role of adduct."@en ;
+        rdfs:comment "Each fact instantiating this property relates an entity (e.g. a tentative annotation) with a string representing a compound playing the role of adduct."@en ;
         rdfs:label "adduct"@en .
 
 
@@ -172,7 +173,7 @@
                 rdfs:comment """Explanation of the execution of an adduct relation rule. Below is presented an example of adduct relation rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
   {
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
                             the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"
   }
 
@@ -184,7 +185,7 @@ and here, an example in JSON-LD:
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
     \"@type\":\"https://w3id.org/def/lis#ARRExplanation\",
  
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
                             the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~"""@en ;
@@ -203,25 +204,25 @@ and here, an example in JSON-LD:
                                        owl:onClass :CertaintyLevel
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasHypothesis ;
+                                       owl:onProperty :hasTentativeAnnotation ;
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                       owl:onClass :Hypothesis
+                                       owl:onClass :TentativeAnnotaion
                                      ] ;
-                     rdfs:comment """A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+                     rdfs:comment """A certainty level assignment with explanations relates a tentative annotation with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
     \"ruleType\":\"ionization_rule_type\",
-    \"trueValue\":\"expected\",
-    \"hypothesis\": {
+    \"trueValue\":\"very_likely\",
+    \"tentativeAnnotation\": {
       \"identifier\":315,
       \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
       \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
       \"adduct\":\"M+Na\"
     },
     \"explanation\": {
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely that the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
     }
 }
@@ -232,30 +233,30 @@ and here, an example in JSON-LD:
     \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
     \"@type\": \"https://w3id.org/def/lis#CLAwithExplanations\",
       \"ruleType\":\"ionization_rule_type\",
-    \"trueValue\":\"expected\",
-    \"hypothesis\": {
+    \"trueValue\":\"very_likely\",
+    \"tentativeAnnotation\": {
       \"identifier\":315,
       \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},
       \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},
       \"adduct\":\"M+Na\"
     },
     \"explanation\": {
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely that the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
     }
 }
 
 ~~~~
-LIS returns an array of certainty level assignments with explanations."""@en ;
+LAS returns an array of certainty level assignments with explanations."""@en ;
                      rdfs:label "certainty level assignment with explanations"@en .
 
 
 ###  https://w3id.org/def/lis#CertaintyLevel
 :CertaintyLevel rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                rdfs:comment "The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_."@en ;
+                rdfs:comment "The certainty levels can be _very unlikely_, _unlikely_, _not applicable_, _likely_, _very likely_ or _sure_."@en ;
                 rdfs:label "certainty level"@en .
 
 
@@ -293,12 +294,12 @@ and here, an example in JSON-LD:
 ###  https://w3id.org/def/lis#Experiment
 :Experiment rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasHypothesis ;
-                              owl:someValuesFrom :Hypothesis
-                            ] ,
-                            [ rdf:type owl:Restriction ;
                               owl:onProperty :hasIonizationMode ;
                               owl:someValuesFrom :IonizationMode
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTentativeAnnotation ;
+                              owl:someValuesFrom :TentativeAnnotaion
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasModifier ;
@@ -310,13 +311,13 @@ and here, an example in JSON-LD:
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onDataRange xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment """An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+            rdfs:comment """An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of tentative annotations. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
 ~~~~
 {
     \"identifier\": 1,
     \"hasIonizationMode\": \"positive\",
     \"hasModifier\": \"modifier_NH3\",
-    \"hasHypothesis\": [
+    \"hasTentativeAnnotation\": [
         {
             \"identifier\": 3,
             \"empiricalCompound\": {
@@ -450,7 +451,7 @@ and here, an example in JSON-LD:
     \"identifier\": 1,
     \"hasIonizationMode\": \"positive\",
     \"hasModifier\": \"modifier_NH3\",
-    \"hasHypothesis\": [
+    \"hasTentativeAnnotation\": [
         {
             \"identifier\": 3,
             \"empiricalCompound\": {
@@ -576,7 +577,7 @@ and here, an example in JSON-LD:
 }
 
 ~~~~
-LIS takes as input an experiment."""@en ;
+LAS takes as input an experiment."""@en ;
             rdfs:label "experiment"@en .
 
 
@@ -595,9 +596,9 @@ LIS takes as input an experiment."""@en ;
              rdfs:comment """Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely that the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
     }
 ~~~~
@@ -608,71 +609,13 @@ and here, an example in JSON-LD:
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
    \"@type\":\"https://w3id.org/def/lis#Explanation\",
    
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~"""@en ;
              rdfs:label "explanation"@en .
-
-
-###  https://w3id.org/def/lis#Hypothesis
-:Hypothesis rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasEmpiricalCompound ;
-                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onClass :EmpiricalCompound
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasTheoreticalCompound ;
-                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onClass :TheoreticalCompound
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :identifier ;
-                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onDataRange xsd:nonNegativeInteger
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :adduct ;
-                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onDataRange xsd:string
-                            ] ;
-            rdfs:comment """A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of hypothesis in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
-~~~~
-{
-    \"identifier\": 3,
-    \"empiricalCompound\": {
-       \"mass\": 399.3367,
-       \"retentionTime\": 18.8425
-     },
-     \"theoreticalCompound\": {
-        \"identifier\": 32675,
-        \"name\": \"L-palmitoylcarnitine\"
-     },
-     \"adduct\": \"M+H\"
-}
-~~~~
-and here, an example in JSON-LD:
-~~~~
-{
-    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
-    \"@type\": \"https://w3id.org/def/lis#Hypothesis\",
-
-    \"identifier\": 3,
-    \"empiricalCompound\": {
-       \"mass\": 399.3367,
-       \"retentionTime\": 18.8425
-     },
-     \"theoreticalCompound\": {
-        \"identifier\": 32675,
-        \"name\": \"L-palmitoylcarnitine\"
-     },
-     \"adduct\": \"M+H\"
-}
-~~~~"""@en ;
-            rdfs:label "hypothesis"@en .
 
 
 ###  https://w3id.org/def/lis#IRExplanation
@@ -690,9 +633,9 @@ and here, an example in JSON-LD:
                rdfs:comment """Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explaining this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical compound 
                             PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely that the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~
@@ -703,9 +646,9 @@ and here, an example in JSON-LD:
 \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
    \"@type\":\"https://w3id.org/def/lis#IRExplanation\",
 
-      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+      \"coreInformation\":\"It is very likely that the empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is the theoretical 
                             compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",
-      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+      \"additionalInformation\":\"It is very likely that the empirical compound 495.3352@19.4689 is the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
                                   the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"
 }
 ~~~~"""@en ;
@@ -783,6 +726,64 @@ and here, an example in JSON-LD:
           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
           rdfs:comment "The rule types are ionization, adduct relation and retention time."@en ;
           rdfs:label "rule type"@en .
+
+
+###  https://w3id.org/def/lis#TentativeAnnotaion
+:TentativeAnnotaion rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasEmpiricalCompound ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :EmpiricalCompound
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTheoreticalCompound ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :TheoreticalCompound
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :identifier ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :adduct ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:string
+                                    ] ;
+                    rdfs:comment """A tentative annotation is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of tentative annotation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+    \"identifier\": 3,
+    \"empiricalCompound\": {
+       \"mass\": 399.3367,
+       \"retentionTime\": 18.8425
+     },
+     \"theoreticalCompound\": {
+        \"identifier\": 32675,
+        \"name\": \"L-palmitoylcarnitine\"
+     },
+     \"adduct\": \"M+H\"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",
+    \"@type\": \"https://w3id.org/def/lis#TentativeAnnotation\",
+
+    \"identifier\": 3,
+    \"empiricalCompound\": {
+       \"mass\": 399.3367,
+       \"retentionTime\": 18.8425
+     },
+     \"theoreticalCompound\": {
+        \"identifier\": 32675,
+        \"name\": \"L-palmitoylcarnitine\"
+     },
+     \"adduct\": \"M+H\"
+}
+~~~~"""@en ;
+                    rdfs:label "tentative annotation"@en .
 
 
 ###  https://w3id.org/def/lis#TheoreticalCompound
