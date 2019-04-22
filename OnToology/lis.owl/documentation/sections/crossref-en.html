@@ -22,7 +22,7 @@ This section provides details for each class and property defined by LAS Ontolog
          <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
       </li>
       <li>
-         <a href="#Hypothesis" title="https://w3id.org/def/lis#Hypothesis">hypothesis</a>
+         <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
       </li>
       <li>
          <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
@@ -124,12 +124,12 @@ and here, an example in JSON-LD:
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#CLAwithExplanations</p>
       <div class="comment">
-         <span class="markdown">A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+         <span class="markdown">A certainty level assignment with explanations relates an putative annotation with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
     "ruleType":"ionization_rule_type",
     "trueValue":"expected",
-    "hypothesis": {
+    "putative annotation": {
       "identifier":315,
       "empiricalCompound": {"mass":517.3172, "rt":19.4689},
       "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
@@ -150,7 +150,7 @@ and here, an example in JSON-LD:
     "@type": "https://w3id.org/def/lis#CLAwithExplanations",
       "ruleType":"ionization_rule_type",
     "trueValue":"expected",
-    "hypothesis": {
+    "putative annotation": {
       "identifier":315,
       "empiricalCompound": {"mass":517.3172, "rt":19.4689},
       "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
@@ -183,9 +183,9 @@ LAS returns an array of certainty level assignments with explanations.</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#hasHypothesis" title="https://w3id.org/def/lis#hasHypothesis">has hypothesis</a>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <a href="#Hypothesis" title="https://w3id.org/def/lis#Hypothesis">hypothesis</a>
+            <span class="logic">exactly</span> 1 <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -245,13 +245,13 @@ and here, an example in JSON-LD:
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#Experiment</p>
       <div class="comment">
-         <span class="markdown">An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+         <span class="markdown">An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of putative annotations. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
 ~~~~
 {
     "identifier": 1,
     "hasIonizationMode": "positive",
     "hasModifier": "modifier_NH3",
-    "hasHypothesis": [
+    "hasPutativeAnnotation": [
         {
             "identifier": 3,
             "empiricalCompound": {
@@ -385,7 +385,7 @@ and here, an example in JSON-LD:
     "identifier": 1,
     "hasIonizationMode": "positive",
     "hasModifier": "modifier_NH3",
-    "hasHypothesis": [
+    "hasPutativeAnnotation": [
         {
             "identifier": 3,
             "empiricalCompound": {
@@ -516,10 +516,10 @@ LAS takes as input an experiment.</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#hasHypothesis" title="https://w3id.org/def/lis#hasHypothesis">has hypothesis</a>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Hypothesis" title="https://w3id.org/def/lis#Hypothesis">hypothesis</a>
+            <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -614,15 +614,15 @@ and here, an example in JSON-LD:
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Hypothesis">
-      <h3>hypothesis<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="PutativeAnnotation">
+      <h3>putative annotation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/lis#Hypothesis</p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#PutativeAnnotation</p>
       <div class="comment">
-         <span class="markdown">A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of hypothesis in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+         <span class="markdown">A putative annotation is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of putative annotation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
 ~~~~
 {
     "identifier": 3,
@@ -641,7 +641,7 @@ and here, an example in JSON-LD:
 ~~~~
 {
     "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
-    "@type": "https://w3id.org/def/lis#Hypothesis",
+    "@type": "https://w3id.org/def/lis#PutativeAnnotation",
 
     "identifier": 3,
     "empiricalCompound": {
@@ -680,7 +680,7 @@ and here, an example in JSON-LD:
             <span class="logic">max</span> 1</dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasHypothesis" title="https://w3id.org/def/lis#hasHypothesis">has hypothesis</a>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -940,7 +940,7 @@ and here, an example in JSON-LD:
          <a href="#hasExplanation" title="https://w3id.org/def/lis#hasExplanation">has explanation</a>
       </li>
       <li>
-         <a href="#hasHypothesis" title="https://w3id.org/def/lis#hasHypothesis">has hypothesis</a>
+         <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
       </li>
       <li>
          <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
@@ -988,7 +988,7 @@ and here, an example in JSON-LD:
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#hasEmpiricalCompound</p>
       <div class="comment">
-         <span class="markdown">It is the relation between entities (e.g. hypotheses) and empirical compounds.</span>
+         <span class="markdown">It is the relation between entities (e.g. putative annotations) and empirical compounds.</span>
       </div>
       <div class="description">
          <dl>
@@ -1020,21 +1020,21 @@ and here, an example in JSON-LD:
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasHypothesis">
-      <h3>has hypothesis<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasPutativeAnnotation">
+      <h3>has putative annotation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/lis#hasHypothesis</p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasPutativeAnnotation</p>
       <div class="comment">
-         <span class="markdown">It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and hypotheses.</span>
+         <span class="markdown">It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and putative annotations.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <a href="#Hypothesis" title="https://w3id.org/def/lis#Hypothesis">hypothesis</a>
+               <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1123,7 +1123,7 @@ and here, an example in JSON-LD:
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#hasTheoreticalCompound</p>
       <div class="comment">
-         <span class="markdown">It is the relation between entities (e.g. hypotheses) and theoretical compounds.</span>
+         <span class="markdown">It is the relation between entities (e.g. putative annotations) and theoretical compounds.</span>
       </div>
       <div class="description">
          <dl>
@@ -1208,7 +1208,7 @@ and here, an example in JSON-LD:
       <p>
          <strong>IRI:</strong> https://w3id.org/def/lis#adduct</p>
       <div class="comment">
-         <span class="markdown">Each fact instantiating this property relates an entity (e.g. a hypothesis) with a string representing a compound playing the role of adduct.</span>
+         <span class="markdown">Each fact instantiating this property relates an entity (e.g. a putative annotation) with a string representing a compound playing the role of adduct.</span>
       </div>
       <div class="description">
          <dl>
