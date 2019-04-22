@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:RuleType" "base:Explanation" "base:IonizationMode" "base:Modifier" "base:ARRExplanation" "base:CertaintyLevel" "base:IRExplanation" "base:RTRExplanation" "skos:OrderedCollection" "skos:Collection" "skos:Concept" ; /*classes style*/
+	"base:Modifier" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"base:IRExplanation" -> "base:Explanation" [ label = "rdfs:subClassOf" ];
+	"base:RTRExplanation" -> "base:Explanation" [ label = "rdfs:subClassOf" ];
+	"base:CertaintyLevel" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"base:ARRExplanation" -> "base:Explanation" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"base:RuleType" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"base:IonizationMode" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+
+}

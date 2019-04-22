@@ -1,0 +1,1731 @@
+<html><h2 id="crossreference" class="list">Cross reference for LAS Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by LAS Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ARRExplanation" title="https://w3id.org/def/lis#ARRExplanation">adduct relation rule explanation</a>
+      </li>
+      <li>
+         <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+      </li>
+      <li>
+         <a href="#CLAwithExplanations" title="https://w3id.org/def/lis#CLAwithExplanations">certainty level assignment with explanations</a>
+      </li>
+      <li>
+         <a href="#EmpiricalCompound" title="https://w3id.org/def/lis#EmpiricalCompound">empirical compound</a>
+      </li>
+      <li>
+         <a href="#Experiment" title="https://w3id.org/def/lis#Experiment">experiment</a>
+      </li>
+      <li>
+         <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+      </li>
+      <li>
+         <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
+      </li>
+      <li>
+         <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+      </li>
+      <li>
+         <a href="#IRExplanation" title="https://w3id.org/def/lis#IRExplanation">ionization rule explanation</a>
+      </li>
+      <li>
+         <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+      </li>
+      <li>
+         <a href="#RTRExplanation" title="https://w3id.org/def/lis#RTRExplanation">retention rule explanation</a>
+      </li>
+      <li>
+         <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+      </li>
+      <li>
+         <a href="#TheoreticalCompound" title="https://w3id.org/def/lis#TheoreticalCompound">theoretical compound</a>
+      </li>
+   </ul>
+   <div class="entity" id="ARRExplanation">
+      <h3>adduct relation rule explanation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#ARRExplanation</p>
+      <div class="comment">
+         <span class="markdown">Explanation of the execution of an adduct relation rule. Below is presented an example of adduct relation rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+  {
+      "coreInformation":"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well."
+  }
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type":"https://w3id.org/def/lis#ARRExplanation",
+ 
+      "coreInformation":"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, 
+                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">value</span> 
+            <a href="#adductRelationRuleType" title="https://w3id.org/def/lis#adductRelationRuleType">adduct relation type rule</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CertaintyLevel">
+      <h3>certainty level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#CertaintyLevel</p>
+      <div class="comment">
+         <span class="markdown">The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCertaintyLevel" title="https://w3id.org/def/lis#hasCertaintyLevel">has certainty level</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#expected" title="https://w3id.org/def/lis#expected">expected</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#impossible" title="https://w3id.org/def/lis#impossible">impossible</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#improbable" title="https://w3id.org/def/lis#improbable">improbable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#possible" title="https://w3id.org/def/lis#possible">possible</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#sure" title="https://w3id.org/def/lis#sure">sure</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CLAwithExplanations">
+      <h3>certainty level assignment with explanations<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#CLAwithExplanations</p>
+      <div class="comment">
+         <span class="markdown">A certainty level assignment with explanations relates an putative annotation with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+    "ruleType":"ionization_rule_type",
+    "trueValue":"expected",
+    "putative annotation": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#CLAwithExplanations",
+      "ruleType":"ionization_rule_type",
+    "trueValue":"expected",
+    "putative annotation": {
+      "identifier":315,
+      "empiricalCompound": {"mass":517.3172, "rt":19.4689},
+      "theoreticalCompound": {"identifier":2628, "name":"PC(O-14:0/2:0)"},
+      "adduct":"M+Na"
+    },
+    "explanation": {
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+}
+
+~~~~
+LAS returns an array of certainty level assignments with explanations.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasExplanation" title="https://w3id.org/def/lis#hasExplanation">has explanation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasCertaintyLevel" title="https://w3id.org/def/lis#hasCertaintyLevel">has certainty level</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCertaintyLevel" title="https://w3id.org/def/lis#hasCertaintyLevel">has certainty level</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmpiricalCompound">
+      <h3>empirical compound<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#EmpiricalCompound</p>
+      <div class="comment">
+         <span class="markdown">An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+   "mass": 425.3504,
+   "retentionTime": 19.5463
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#EmpiricalCompound",
+    "mass": 425.3504,
+    "retentionTime": 19.5463
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#mass" title="https://w3id.org/def/lis#mass">mass</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#retentionTime" title="https://w3id.org/def/lis#retentionTime">retention time</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Experiment">
+      <h3>experiment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#Experiment</p>
+      <div class="comment">
+         <span class="markdown">An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of putative annotations. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:
+~~~~
+{
+    "identifier": 1,
+    "hasIonizationMode": "positive",
+    "hasModifier": "modifier_NH3",
+    "hasPutativeAnnotation": [
+        {
+            "identifier": 3,
+            "empiricalCompound": {
+                "mass": 399.3367,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 81,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 6692,
+                "name": "PG(P-20:0/22:2(13Z,16Z))"
+            },
+            "adduct": "M+2H"
+        },
+        {
+            "identifier": 82,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 98,
+            "empiricalCompound": {
+                "mass": 315.2424,
+                "retentionTime": 8.1449
+            },
+            "theoreticalCompound": {
+                "identifier": 32602,
+                "name": "O-decanoyl-R-carnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 104,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 26629,
+                "name": "14,17-Octadecadienoic acid "
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 205,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31528,
+                "name": "11-Hexadecynyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 296,
+            "empiricalCompound": {
+                "mass": 495.3352,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 315,
+            "empiricalCompound": {
+                "mass": 517.3172,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 187,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31499,
+                "name": "10E,12E-Hexadecadienyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 496,
+            "empiricalCompound": {
+                "mass": 282.2563,
+                "retentionTime": 31.2616
+            },
+            "theoreticalCompound": {
+                "identifier": 31512,
+                "name": "10Z-Hexadecenyl acetate"
+            },
+            "adduct": "M+H"
+        }
+    ]
+}
+
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#Experiment",
+
+    "identifier": 1,
+    "hasIonizationMode": "positive",
+    "hasModifier": "modifier_NH3",
+    "hasPutativeAnnotation": [
+        {
+            "identifier": 3,
+            "empiricalCompound": {
+                "mass": 399.3367,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 81,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 6692,
+                "name": "PG(P-20:0/22:2(13Z,16Z))"
+            },
+            "adduct": "M+2H"
+        },
+        {
+            "identifier": 82,
+            "empiricalCompound": {
+                "mass": 421.3169,
+                "retentionTime": 18.8425
+            },
+            "theoreticalCompound": {
+                "identifier": 32675,
+                "name": "L-palmitoylcarnitine"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 98,
+            "empiricalCompound": {
+                "mass": 315.2424,
+                "retentionTime": 8.1449
+            },
+            "theoreticalCompound": {
+                "identifier": 32602,
+                "name": "O-decanoyl-R-carnitine"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 104,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 26629,
+                "name": "14,17-Octadecadienoic acid "
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 205,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31528,
+                "name": "11-Hexadecynyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 296,
+            "empiricalCompound": {
+                "mass": 495.3352,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 315,
+            "empiricalCompound": {
+                "mass": 517.3172,
+                "retentionTime": 19.4689
+            },
+            "theoreticalCompound": {
+                "identifier": 2628,
+                "name": "PC(O-14:0/2:0)"
+            },
+            "adduct": "M+Na"
+        },
+        {
+            "identifier": 187,
+            "empiricalCompound": {
+                "mass": 280.2402,
+                "retentionTime": 28.2695
+            },
+            "theoreticalCompound": {
+                "identifier": 31499,
+                "name": "10E,12E-Hexadecadienyl acetate"
+            },
+            "adduct": "M+H"
+        },
+        {
+            "identifier": 496,
+            "empiricalCompound": {
+                "mass": 282.2563,
+                "retentionTime": 31.2616
+            },
+            "theoreticalCompound": {
+                "identifier": 31512,
+                "name": "10Z-Hexadecenyl acetate"
+            },
+            "adduct": "M+H"
+        }
+    ]
+  
+}
+
+~~~~
+LAS takes as input an experiment.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasModifier" title="https://w3id.org/def/lis#hasModifier">has modifier</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#identifier" title="https://w3id.org/def/lis#identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasModifier" title="https://w3id.org/def/lis#hasModifier">has modifier</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Explanation">
+      <h3>explanation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#Explanation</p>
+      <div class="comment">
+         <span class="markdown">Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+    }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+   "@type":"https://w3id.org/def/lis#Explanation",
+   
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#coreInformation" title="https://w3id.org/def/lis#coreInformation">core information</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ARRExplanation" title="https://w3id.org/def/lis#ARRExplanation">adduct relation rule explanation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IRExplanation" title="https://w3id.org/def/lis#IRExplanation">ionization rule explanation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RTRExplanation" title="https://w3id.org/def/lis#RTRExplanation">retention rule explanation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#additionalInformation" title="https://w3id.org/def/lis#additionalInformation">additional information</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#coreInformation" title="https://w3id.org/def/lis#coreInformation">core information</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#evidenceFor" title="https://w3id.org/def/lis#evidenceFor">evidence for</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#evidenceAgainst" title="https://w3id.org/def/lis#evidenceAgainst">evident against</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasExplanation" title="https://w3id.org/def/lis#hasExplanation">has explanation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PutativeAnnotation">
+      <h3>putative annotation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#PutativeAnnotation</p>
+      <div class="comment">
+         <span class="markdown">A putative annotation is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of putative annotation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+    "identifier": 3,
+    "empiricalCompound": {
+       "mass": 399.3367,
+       "retentionTime": 18.8425
+     },
+     "theoreticalCompound": {
+        "identifier": 32675,
+        "name": "L-palmitoylcarnitine"
+     },
+     "adduct": "M+H"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#PutativeAnnotation",
+
+    "identifier": 3,
+    "empiricalCompound": {
+       "mass": 399.3367,
+       "retentionTime": 18.8425
+     },
+     "theoreticalCompound": {
+        "identifier": 32675,
+        "name": "L-palmitoylcarnitine"
+     },
+     "adduct": "M+H"
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#EmpiricalCompound" title="https://w3id.org/def/lis#EmpiricalCompound">empirical compound</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasTheoreticalCompound" title="https://w3id.org/def/lis#hasTheoreticalCompound">has theoretical compound</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TheoreticalCompound" title="https://w3id.org/def/lis#TheoreticalCompound">theoretical compound</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#identifier" title="https://w3id.org/def/lis#identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#adduct" title="https://w3id.org/def/lis#adduct">adduct</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IonizationMode">
+      <h3>ionization mode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#IonizationMode</p>
+      <div class="comment">
+         <span class="markdown">It can be positive or negative.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#negativeIonizationMode" title="https://w3id.org/def/lis#negativeIonizationMode">negative ionization mode</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#positiveIonizationMode" title="https://w3id.org/def/lis#positiveIonizationMode">positive ionization mode</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IRExplanation">
+      <h3>ionization rule explanation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#IRExplanation</p>
+      <div class="comment">
+         <span class="markdown">Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explaining this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound 
+                            PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+   "@type":"https://w3id.org/def/lis#IRExplanation",
+
+      "coreInformation":"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical 
+                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102",
+      "additionalInformation":"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, 
+                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well."
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">value</span> 
+            <a href="#ionizationRuleType" title="https://w3id.org/def/lis#ionizationRuleType">ionization rule type</a>
+         </dd>
+         <dd>
+            <a href="#additionalInformation" title="https://w3id.org/def/lis#additionalInformation">additional information</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Modifier">
+      <h3>modifier<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#Modifier</p>
+      <div class="comment">
+         <span class="markdown">It is a substance that plays the role of modifier in an experiment. The possible modifieres are
+
+- NH3;
+- HCOO;
+- CH3COO;
+- HCOONH3; or
+- CH3COONH3</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasModifier" title="https://w3id.org/def/lis#hasModifier">has modifier</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#modifierHCOO" title="https://w3id.org/def/lis#modifierHCOO">The modifier HCOO.</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#modifierCH3COO" title="https://w3id.org/def/lis#modifierCH3COO">modifier CH3COO</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#modifierCH3COONH3" title="https://w3id.org/def/lis#modifierCH3COONH3">modifier CH3COONH3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#modifierHCOONH3" title="https://w3id.org/def/lis#modifierHCOONH3">modifier HCOONH3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#modifierNH3" title="https://w3id.org/def/lis#modifierNH3">modifier NH3</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RTRExplanation">
+      <h3>retention rule explanation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#RTRExplanation</p>
+      <div class="comment">
+         <span class="markdown">Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of retention time rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+    {
+      "coreInformation":"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The 
+                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond",
+      "evidenceFor":"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ 
+                        lipid with 18 carbons and 2 double bonds.",
+      "evidenceAgainst":"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid 
+                            with 18 carbons and no double bond."
+  }
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+   "@context":
+"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+   "@type":"https://w3id.org/def/lis#RTRExplanation",
+  
+      "coreInformation":"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The 
+                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond",
+      "evidenceFor":"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ 
+                        lipid with 18 carbons and 2 double bonds.",
+      "evidenceAgainst":"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid
+                            with 18 carbons and no double bond."
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">value</span> 
+            <a href="#retentionTimeRuleType" title="https://w3id.org/def/lis#retentionTimeRuleType">retention time rule type</a>
+         </dd>
+         <dd>
+            <a href="#evidenceAgainst" title="https://w3id.org/def/lis#evidenceAgainst">evident against</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#evidenceFor" title="https://w3id.org/def/lis#evidenceFor">evidence for</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="RuleType">
+      <h3>rule type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#RuleType</p>
+      <div class="comment">
+         <span class="markdown">The rule types are ionization, adduct relation and retention time.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#adductRelationRuleType" title="https://w3id.org/def/lis#adductRelationRuleType">adduct relation type rule</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ionizationRuleType" title="https://w3id.org/def/lis#ionizationRuleType">ionization rule type</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#retentionTimeRuleType" title="https://w3id.org/def/lis#retentionTimeRuleType">retention time rule type</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TheoreticalCompound">
+      <h3>theoretical compound<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#TheoreticalCompound</p>
+      <div class="comment">
+         <span class="markdown">A theoretical compound has a name and an identifier. Below is presented an example of theoretical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):
+~~~~
+{
+    "identifier": 32675,
+    "name": "L-palmitoylcarnitine"
+}
+~~~~
+and here, an example in JSON-LD:
+~~~~
+{
+    "@context": "https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld",
+    "@type": "https://w3id.org/def/lis#TheoreticalCompound",
+    "identifier": 32675,
+    "name": "L-palmitoylcarnitine"
+}
+~~~~</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#identifier" title="https://w3id.org/def/lis#identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#name" title="https://w3id.org/def/lis#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTheoreticalCompound" title="https://w3id.org/def/lis#hasTheoreticalCompound">has theoretical compound</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasCertaintyLevel" title="https://w3id.org/def/lis#hasCertaintyLevel">has certainty level</a>
+      </li>
+      <li>
+         <a href="#hasEmpiricalCompound" title="https://w3id.org/def/lis#hasEmpiricalCompound">has empirical compound</a>
+      </li>
+      <li>
+         <a href="#hasExplanation" title="https://w3id.org/def/lis#hasExplanation">has explanation</a>
+      </li>
+      <li>
+         <a href="#hasPutativeAnnotation" title="https://w3id.org/def/lis#hasPutativeAnnotation">has putative annotation</a>
+      </li>
+      <li>
+         <a href="#hasIonizationMode" title="https://w3id.org/def/lis#hasIonizationMode">has ionization mode</a>
+      </li>
+      <li>
+         <a href="#hasModifier" title="https://w3id.org/def/lis#hasModifier">has modifier</a>
+      </li>
+      <li>
+         <a href="#hasRuleType" title="https://w3id.org/def/lis#hasRuleType">has rule type</a>
+      </li>
+      <li>
+         <a href="#hasTheoreticalCompound" title="https://w3id.org/def/lis#hasTheoreticalCompound">has theoretical compound</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasCertaintyLevel">
+      <h3>has certainty level<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasCertaintyLevel</p>
+      <div class="comment">
+         <span class="markdown">It relates certainty assignments with explanations to certainty levels.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CLAwithExplanations" title="https://w3id.org/def/lis#CLAwithExplanations">certainty level assignment with explanations</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEmpiricalCompound">
+      <h3>has empirical compound<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasEmpiricalCompound</p>
+      <div class="comment">
+         <span class="markdown">It is the relation between entities (e.g. putative annotations) and empirical compounds.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#EmpiricalCompound" title="https://w3id.org/def/lis#EmpiricalCompound">empirical compound</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExplanation">
+      <h3>has explanation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasExplanation</p>
+      <div class="comment">
+         <span class="markdown">It relates entities (e.g. certainty level assignments with explanations) to explanations.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPutativeAnnotation">
+      <h3>has putative annotation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasPutativeAnnotation</p>
+      <div class="comment">
+         <span class="markdown">It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and putative annotations.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PutativeAnnotation" title="https://w3id.org/def/lis#PutativeAnnotation">putative annotation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIonizationMode">
+      <h3>has ionization mode<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasIonizationMode</p>
+      <div class="comment">
+         <span class="markdown">It relates experiments with ionization modes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Experiment" title="https://w3id.org/def/lis#Experiment">experiment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasModifier">
+      <h3>has modifier<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasModifier</p>
+      <div class="comment">
+         <span class="markdown">It relates experiments with modifieres.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Experiment" title="https://w3id.org/def/lis#Experiment">experiment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRuleType">
+      <h3>has rule type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasRuleType</p>
+      <div class="comment">
+         <span class="markdown">It relates explanations to rule types.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTheoreticalCompound">
+      <h3>has theoretical compound<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#hasTheoreticalCompound</p>
+      <div class="comment">
+         <span class="markdown">It is the relation between entities (e.g. putative annotations) and theoretical compounds.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TheoreticalCompound" title="https://w3id.org/def/lis#TheoreticalCompound">theoretical compound</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#additionalInformation" title="https://w3id.org/def/lis#additionalInformation">additional information</a>
+      </li>
+      <li>
+         <a href="#adduct" title="https://w3id.org/def/lis#adduct">adduct</a>
+      </li>
+      <li>
+         <a href="#coreInformation" title="https://w3id.org/def/lis#coreInformation">core information</a>
+      </li>
+      <li>
+         <a href="#evidenceFor" title="https://w3id.org/def/lis#evidenceFor">evidence for</a>
+      </li>
+      <li>
+         <a href="#evidenceAgainst" title="https://w3id.org/def/lis#evidenceAgainst">evident against</a>
+      </li>
+      <li>
+         <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+      </li>
+      <li>
+         <a href="#identifier" title="https://w3id.org/def/lis#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#mass" title="https://w3id.org/def/lis#mass">mass</a>
+      </li>
+      <li>
+         <a href="#name" title="https://w3id.org/def/lis#name">name</a>
+      </li>
+      <li>
+         <a href="#retentionTime" title="https://w3id.org/def/lis#retentionTime">
+            <span>retention time</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="additionalInformation">
+      <h3>additional information<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#additionalInformation</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates an explanation of ionization rule to its additional information.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="adduct">
+      <h3>adduct<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#adduct</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates an entity (e.g. a putative annotation) with a string representing a compound playing the role of adduct.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="coreInformation">
+      <h3>core information<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#coreInformation</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates an explanation to its core information.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evidenceFor">
+      <h3>evidence for<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#evidenceFor</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates a retention time rule explanation to an evidence for.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evidenceAgainst">
+      <h3>evident against<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#evidenceAgainst</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates a retention time rule explanation to an evidence against.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#explanationContent" title="https://w3id.org/def/lis#explanationContent">explanation content</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="explanationContent">
+      <h3>explanation content<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#explanationContent</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates an explanation with a string.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#additionalInformation" title="https://w3id.org/def/lis#additionalInformation">additional information</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#coreInformation" title="https://w3id.org/def/lis#coreInformation">core information</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#evidenceFor" title="https://w3id.org/def/lis#evidenceFor">evidence for</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#evidenceAgainst" title="https://w3id.org/def/lis#evidenceAgainst">evident against</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Explanation" title="https://w3id.org/def/lis#Explanation">explanation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#identifier</p>
+      <div class="comment">
+         <span class="markdown">It allows selecting an entity unequivocally.</span>
+      </div>
+   </div>
+   <div class="entity" id="mass">
+      <h3>mass<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#mass</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates  an entity (e.g. an empirical compound) to its mass.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#name</p>
+      <div class="comment">
+         <span class="markdown">Each fact instantiating this property relates an entity (e.g. a theoretical compound) to its name.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="retentionTime">
+      <h3>retention time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#retentionTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#adductRelationRuleType" title="https://w3id.org/def/lis#adductRelationRuleType">adduct relation type rule</a>
+      </li>
+      <li>
+         <a href="#expected" title="https://w3id.org/def/lis#expected">expected</a>
+      </li>
+      <li>
+         <a href="#impossible" title="https://w3id.org/def/lis#impossible">impossible</a>
+      </li>
+      <li>
+         <a href="#improbable" title="https://w3id.org/def/lis#improbable">improbable</a>
+      </li>
+      <li>
+         <a href="#ionizationRuleType" title="https://w3id.org/def/lis#ionizationRuleType">ionization rule type</a>
+      </li>
+      <li>
+         <a href="#modifierCH3COO" title="https://w3id.org/def/lis#modifierCH3COO">modifier CH3COO</a>
+      </li>
+      <li>
+         <a href="#modifierCH3COONH3" title="https://w3id.org/def/lis#modifierCH3COONH3">modifier CH3COONH3</a>
+      </li>
+      <li>
+         <a href="#modifierHCOONH3" title="https://w3id.org/def/lis#modifierHCOONH3">modifier HCOONH3</a>
+      </li>
+      <li>
+         <a href="#modifierNH3" title="https://w3id.org/def/lis#modifierNH3">modifier NH3</a>
+      </li>
+      <li>
+         <a href="#negativeIonizationMode" title="https://w3id.org/def/lis#negativeIonizationMode">negative ionization mode</a>
+      </li>
+      <li>
+         <a href="#positiveIonizationMode" title="https://w3id.org/def/lis#positiveIonizationMode">positive ionization mode</a>
+      </li>
+      <li>
+         <a href="#possible" title="https://w3id.org/def/lis#possible">possible</a>
+      </li>
+      <li>
+         <a href="#retentionTimeRuleType" title="https://w3id.org/def/lis#retentionTimeRuleType">retention time rule type</a>
+      </li>
+      <li>
+         <a href="#sure" title="https://w3id.org/def/lis#sure">sure</a>
+      </li>
+      <li>
+         <a href="#modifierHCOO" title="https://w3id.org/def/lis#modifierHCOO">The modifier HCOO.</a>
+      </li>
+   </ul>
+   <div class="entity" id="adductRelationRuleType">
+      <h3>adduct relation type rule<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#adductRelationRuleType</p>
+      <div class="comment">
+         <span class="markdown">The type of rule &lt;i&gt;adduct relation&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="expected">
+      <h3>expected<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#expected</p>
+      <div class="comment">
+         <span class="markdown">The certainty level &lt;i&gt;expected&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="impossible">
+      <h3>impossible<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#impossible</p>
+      <div class="comment">
+         <span class="markdown">The certainty level &lt;i&gt;impossible&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="improbable">
+      <h3>improbable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#improbable</p>
+      <div class="comment">
+         <span class="markdown">The certainty level &lt;i&gt;improbable&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ionizationRuleType">
+      <h3>ionization rule type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#ionizationRuleType</p>
+      <div class="comment">
+         <span class="markdown">The type of rule &lt;i&gt;ionization&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="modifierCH3COO">
+      <h3>modifier CH3COO<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#modifierCH3COO</p>
+      <div class="comment">
+         <span class="markdown">The modifier CH3COO.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="modifierCH3COONH3">
+      <h3>modifier CH3COONH3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#modifierCH3COONH3</p>
+      <div class="comment">
+         <span class="markdown">The modifier CH3COONH3.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="modifierHCOONH3">
+      <h3>modifier HCOONH3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#modifierHCOONH3</p>
+      <div class="comment">
+         <span class="markdown">The modifier HCOONH3.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="modifierNH3">
+      <h3>modifier NH3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#modifierNH3</p>
+      <div class="comment">
+         <span class="markdown">The modifier NH3.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="negativeIonizationMode">
+      <h3>negative ionization mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#negativeIonizationMode</p>
+      <div class="comment">
+         <span class="markdown">The negative ionization mode.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="positiveIonizationMode">
+      <h3>positive ionization mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#positiveIonizationMode</p>
+      <div class="comment">
+         <span class="markdown">The positive ionization mode.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#IonizationMode" title="https://w3id.org/def/lis#IonizationMode">ionization mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="possible">
+      <h3>possible<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#possible</p>
+      <div class="comment">
+         <span class="markdown">The certainty level &lt;i&gt;possible&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="retentionTimeRuleType">
+      <h3>retention time rule type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#retentionTimeRuleType</p>
+      <div class="comment">
+         <span class="markdown">The type of rule &lt;i&gt;retention time&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RuleType" title="https://w3id.org/def/lis#RuleType">rule type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="sure">
+      <h3>sure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#sure</p>
+      <div class="comment">
+         <span class="markdown">The certainty level &lt;i&gt;sure&lt;/i&gt;.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CertaintyLevel" title="https://w3id.org/def/lis#CertaintyLevel">certainty level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="modifierHCOO">
+      <h3>The modifier HCOO.<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/lis#modifierHCOO</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Modifier" title="https://w3id.org/def/lis#Modifier">modifier</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</html>

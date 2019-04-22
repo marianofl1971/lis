@@ -1,0 +1,135 @@
+{
+  "@context" : {
+    "hasExplanation" : {
+      "@id" : "https://w3id.org/def/lis#hasExplanation",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasTheoreticalCompound" : {
+      "@id" : "https://w3id.org/def/lis#hasTheoreticalCompound",
+      "@type" : "@id"
+    },
+    "hasRuleType" : {
+      "@id" : "https://w3id.org/def/lis#hasRuleType",
+      "@type" : "@id"
+    },
+    "EmpiricalCompound" : {
+      "@id" : "https://w3id.org/def/lis#EmpiricalCompound"
+    },
+    "additionalInformation" : {
+      "@id" : "https://w3id.org/def/lis#additionalInformation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasModifier" : {
+      "@id" : "https://w3id.org/def/lis#hasModifier",
+      "@type" : "@id"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "evidenceAgainst" : {
+      "@id" : "https://w3id.org/def/lis#evidenceAgainst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "explanationContent" : {
+      "@id" : "https://w3id.org/def/lis#explanationContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "RTRExplanation" : {
+      "@id" : "https://w3id.org/def/lis#RTRExplanation"
+    },
+    "Hypothesis" : {
+      "@id" : "https://w3id.org/def/lis#Hypothesis"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "hasHypothesis" : {
+      "@id" : "https://w3id.org/def/lis#hasHypothesis",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/def/lis#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "IonizationMode" : {
+      "@id" : "https://w3id.org/def/lis#IonizationMode"
+    },
+    "TheoreticalCompound" : {
+      "@id" : "https://w3id.org/def/lis#TheoreticalCompound"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/def/lis#identifier"
+    },
+    "evidenceFor" : {
+      "@id" : "https://w3id.org/def/lis#evidenceFor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CLAwithExplanations" : {
+      "@id" : "https://w3id.org/def/lis#CLAwithExplanations"
+    },
+    "retentionTime" : {
+      "@id" : "https://w3id.org/def/lis#retentionTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "IRExplanation" : {
+      "@id" : "https://w3id.org/def/lis#IRExplanation"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Explanation" : {
+      "@id" : "https://w3id.org/def/lis#Explanation"
+    },
+    "coreInformation" : {
+      "@id" : "https://w3id.org/def/lis#coreInformation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "adduct" : {
+      "@id" : "https://w3id.org/def/lis#adduct",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCertaintyLevel" : {
+      "@id" : "https://w3id.org/def/lis#hasCertaintyLevel",
+      "@type" : "@id"
+    },
+    "ARRExplanation" : {
+      "@id" : "https://w3id.org/def/lis#ARRExplanation"
+    },
+    "mass" : {
+      "@id" : "https://w3id.org/def/lis#mass",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Modifier" : {
+      "@id" : "https://w3id.org/def/lis#Modifier"
+    },
+    "hasIonizationMode" : {
+      "@id" : "https://w3id.org/def/lis#hasIonizationMode",
+      "@type" : "@id"
+    },
+    "CertaintyLevel" : {
+      "@id" : "https://w3id.org/def/lis#CertaintyLevel"
+    },
+    "Experiment" : {
+      "@id" : "https://w3id.org/def/lis#Experiment"
+    },
+    "hasEmpiricalCompound" : {
+      "@id" : "https://w3id.org/def/lis#hasEmpiricalCompound",
+      "@type" : "@id"
+    },
+    "RuleType" : {
+      "@id" : "https://w3id.org/def/lis#RuleType"
+    }
+  }
+}

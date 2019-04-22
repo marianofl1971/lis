@@ -1,0 +1,438 @@
+<https://w3id.org/def/lis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/lis> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<https://w3id.org/def/lis> <http://purl.org/dc/elements/1.1/title> "Ontology for the Lipid Identification Service (LIS)"@en .
+<https://w3id.org/def/lis> <http://purl.org/dc/terms/creator> "Mariano Fernández López"@es .
+<https://w3id.org/def/lis> <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es .
+<https://w3id.org/def/lis> <http://www.w3.org/2000/01/rdf-schema#comment> "This is is the ontology assumed by the [Lipid Identification Service (LIS)](https://github.com/marianofl1971/lis). It defines notions like experiment, hypothesis, empirical compound, theoretical compound, etc. The examples in JSON have been validated using [JSONLint](https://jsonlint.com/), and the examples in JSON-LD, using [JSON-LD Playground](https://json-ld.org/playground/)."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/lis#hasCertaintyLevel
+<https://w3id.org/def/lis#hasCertaintyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasCertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#CLAwithExplanations> .
+<https://w3id.org/def/lis#hasCertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#hasCertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates certainty assignments with explanations to certainty levels."@en .
+<https://w3id.org/def/lis#hasCertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has certainty level"@en .
+# 
+# https://w3id.org/def/lis#hasEmpiricalCompound
+<https://w3id.org/def/lis#hasEmpiricalCompound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasEmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#EmpiricalCompound> .
+<https://w3id.org/def/lis#hasEmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the relation between entities (e.g. hypotheses) and empirical compounds."@en .
+<https://w3id.org/def/lis#hasEmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#label> "has empirical compound"@en .
+# 
+# https://w3id.org/def/lis#hasExplanation
+<https://w3id.org/def/lis#hasExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates entities (e.g. certainty level assignments with explanations) to explanations."@en .
+<https://w3id.org/def/lis#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "has explanation"@en .
+# 
+# https://w3id.org/def/lis#hasHypothesis
+<https://w3id.org/def/lis#hasHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#Hypothesis> .
+<https://w3id.org/def/lis#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the relation between entities (e.g. experiments or certainty level assignments with explanations) and hypotheses."@en .
+<https://w3id.org/def/lis#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis"@en .
+# 
+# https://w3id.org/def/lis#hasIonizationMode
+<https://w3id.org/def/lis#hasIonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasIonizationMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Experiment> .
+<https://w3id.org/def/lis#hasIonizationMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#IonizationMode> .
+<https://w3id.org/def/lis#hasIonizationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates experiments with ionization modes."@en .
+<https://w3id.org/def/lis#hasIonizationMode> <http://www.w3.org/2000/01/rdf-schema#label> "has ionization mode"@en .
+# 
+# https://w3id.org/def/lis#hasModifier
+<https://w3id.org/def/lis#hasModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasModifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Experiment> .
+<https://w3id.org/def/lis#hasModifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#hasModifier> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates experiments with modifieres."@en .
+<https://w3id.org/def/lis#hasModifier> <http://www.w3.org/2000/01/rdf-schema#label> "has modifier"@en .
+# 
+# https://w3id.org/def/lis#hasRuleType
+<https://w3id.org/def/lis#hasRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasRuleType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#hasRuleType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#RuleType> .
+<https://w3id.org/def/lis#hasRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates explanations to rule types."@en .
+<https://w3id.org/def/lis#hasRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "has rule type"@en .
+# 
+# https://w3id.org/def/lis#hasTheoreticalCompound
+<https://w3id.org/def/lis#hasTheoreticalCompound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/lis#hasTheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/lis#TheoreticalCompound> .
+<https://w3id.org/def/lis#hasTheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the relation between entities (e.g. hypotheses) and theoretical compounds."@en .
+<https://w3id.org/def/lis#hasTheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#label> "has theoretical compound"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/lis#additionalInformation
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/lis#explanationContent> .
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates an explanation of ionization rule to its additional information."@en .
+<https://w3id.org/def/lis#additionalInformation> <http://www.w3.org/2000/01/rdf-schema#label> "additional information"@en .
+# 
+# https://w3id.org/def/lis#adduct
+<https://w3id.org/def/lis#adduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#adduct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#adduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates an entity (e.g. a hypothesis) with a string representing a compound playing the role of adduct."@en .
+<https://w3id.org/def/lis#adduct> <http://www.w3.org/2000/01/rdf-schema#label> "adduct"@en .
+# 
+# https://w3id.org/def/lis#coreInformation
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/lis#explanationContent> .
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates an explanation to its core information."@en .
+<https://w3id.org/def/lis#coreInformation> <http://www.w3.org/2000/01/rdf-schema#label> "core information"@en .
+# 
+# https://w3id.org/def/lis#evidenceAgainst
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/lis#explanationContent> .
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates a retention time rule explanation to an evidence against."@en .
+<https://w3id.org/def/lis#evidenceAgainst> <http://www.w3.org/2000/01/rdf-schema#label> "evident against"@en .
+# 
+# https://w3id.org/def/lis#evidenceFor
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/lis#explanationContent> .
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates a retention time rule explanation to an evidence for."@en .
+<https://w3id.org/def/lis#evidenceFor> <http://www.w3.org/2000/01/rdf-schema#label> "evidence for"@en .
+# 
+# https://w3id.org/def/lis#explanationContent
+<https://w3id.org/def/lis#explanationContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#explanationContent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#explanationContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#explanationContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates an explanation with a string."@en .
+<https://w3id.org/def/lis#explanationContent> <http://www.w3.org/2000/01/rdf-schema#label> "explanation content"@en .
+# 
+# https://w3id.org/def/lis#identifier
+<https://w3id.org/def/lis#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/lis#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "It allows selecting an entity unequivocally."@en .
+<https://w3id.org/def/lis#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# https://w3id.org/def/lis#mass
+<https://w3id.org/def/lis#mass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#mass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/def/lis#mass> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates  an entity (e.g. an empirical compound) to its mass."@en .
+<https://w3id.org/def/lis#mass> <http://www.w3.org/2000/01/rdf-schema#label> "mass"@en .
+# 
+# https://w3id.org/def/lis#name
+<https://w3id.org/def/lis#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Each fact instantiating this property relates an entity (e.g. a theoretical compound) to its name."@en .
+<https://w3id.org/def/lis#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# https://w3id.org/def/lis#retentionTime
+<https://w3id.org/def/lis#retentionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/lis#retentionTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/lis#ARRExplanation
+<https://w3id.org/def/lis#ARRExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#ARRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#ARRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasRuleType> .
+_:genid1 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/lis#adductRelationRuleType> .
+<https://w3id.org/def/lis#ARRExplanation> <http://www.w3.org/2000/01/rdf-schema#comment> "Explanation of the execution of an adduct relation rule. Below is presented an example of adduct relation rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n  {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, \n                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"\n  }\n\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\":\"https://w3id.org/def/lis#ARRExplanation\",\n \n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+Na, because, for example, \n                            the empirical compound 495.3352@19.4689 with adduct M+H may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#ARRExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "adduct relation rule explanation"@en .
+# 
+# https://w3id.org/def/lis#CLAwithExplanations
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasExplanation> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasCertaintyLevel> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasHypothesis> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#Hypothesis> .
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/2000/01/rdf-schema#comment> "A certainty level assignment with explanations relates an hypothesis with a certainty level and with an explanation. That is, it is a reification of a ternary relation. Below is presented an example of certaintly level assignment with explanations in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n    \"ruleType\":\"ionization_rule_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical \n                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#CLAwithExplanations\",\n      \"ruleType\":\"ionization_rule_type\",\n    \"trueValue\":\"expected\",\n    \"hypothesis\": {\n      \"identifier\":315,\n      \"empiricalCompound\": {\"mass\":517.3172, \"rt\":19.4689},\n      \"theoreticalCompound\": {\"identifier\":2628, \"name\":\"PC(O-14:0/2:0)\"},\n      \"adduct\":\"M+Na\"\n    },\n    \"explanation\": {\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical \n                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n}\n\n~~~~\nLIS returns an array of certainty level assignments with explanations."@en .
+<https://w3id.org/def/lis#CLAwithExplanations> <http://www.w3.org/2000/01/rdf-schema#label> "certainty level assignment with explanations"@en .
+# 
+# https://w3id.org/def/lis#CertaintyLevel
+<https://w3id.org/def/lis#CertaintyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#CertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/lis#CertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty levels can be _impossible_, _improbable_, _possible_, _expected_ or _sure_."@en .
+<https://w3id.org/def/lis#CertaintyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "certainty level"@en .
+# 
+# https://w3id.org/def/lis#EmpiricalCompound
+<https://w3id.org/def/lis#EmpiricalCompound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#EmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#mass> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/def/lis#EmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#retentionTime> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/def/lis#EmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#comment> "An empirical compound is characterised by a mass and a retention time. Below is presented an example of empirical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n   \"mass\": 425.3504,\n   \"retentionTime\": 19.5463\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#EmpiricalCompound\",\n    \"mass\": 425.3504,\n    \"retentionTime\": 19.5463\n}\n~~~~"@en .
+<https://w3id.org/def/lis#EmpiricalCompound> <http://www.w3.org/2000/01/rdf-schema#label> "empirical compound"@en .
+# 
+# https://w3id.org/def/lis#Experiment
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasHypothesis> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/lis#Hypothesis> .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasIonizationMode> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/lis#IonizationMode> .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasModifier> .
+_:genid9 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#identifier> .
+_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#comment> "An experiment has an identifier, a ionisation mode, (optionally) a modifier, and a collection of hypotheses. Below is presented an example of experiment in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)). Although this example includes it, the modifier can be omitted. In such a case, it is assumed that there is no modifier:\n~~~~\n{\n    \"identifier\": 1,\n    \"hasIonizationMode\": \"positive\",\n    \"hasModifier\": \"modifier_NH3\",\n    \"hasHypothesis\": [\n        {\n            \"identifier\": 3,\n            \"empiricalCompound\": {\n                \"mass\": 399.3367,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 81,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 6692,\n                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"\n            },\n            \"adduct\": \"M+2H\"\n        },\n        {\n            \"identifier\": 82,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 98,\n            \"empiricalCompound\": {\n                \"mass\": 315.2424,\n                \"retentionTime\": 8.1449\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32602,\n                \"name\": \"O-decanoyl-R-carnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 104,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 26629,\n                \"name\": \"14,17-Octadecadienoic acid \"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 205,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31528,\n                \"name\": \"11-Hexadecynyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 296,\n            \"empiricalCompound\": {\n                \"mass\": 495.3352,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 315,\n            \"empiricalCompound\": {\n                \"mass\": 517.3172,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 187,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31499,\n                \"name\": \"10E,12E-Hexadecadienyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 496,\n            \"empiricalCompound\": {\n                \"mass\": 282.2563,\n                \"retentionTime\": 31.2616\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31512,\n                \"name\": \"10Z-Hexadecenyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        }\n    ]\n}\n\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#Experiment\",\n\n    \"identifier\": 1,\n    \"hasIonizationMode\": \"positive\",\n    \"hasModifier\": \"modifier_NH3\",\n    \"hasHypothesis\": [\n        {\n            \"identifier\": 3,\n            \"empiricalCompound\": {\n                \"mass\": 399.3367,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 81,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 6692,\n                \"name\": \"PG(P-20:0/22:2(13Z,16Z))\"\n            },\n            \"adduct\": \"M+2H\"\n        },\n        {\n            \"identifier\": 82,\n            \"empiricalCompound\": {\n                \"mass\": 421.3169,\n                \"retentionTime\": 18.8425\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32675,\n                \"name\": \"L-palmitoylcarnitine\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 98,\n            \"empiricalCompound\": {\n                \"mass\": 315.2424,\n                \"retentionTime\": 8.1449\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 32602,\n                \"name\": \"O-decanoyl-R-carnitine\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 104,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 26629,\n                \"name\": \"14,17-Octadecadienoic acid \"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 205,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31528,\n                \"name\": \"11-Hexadecynyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 296,\n            \"empiricalCompound\": {\n                \"mass\": 495.3352,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 315,\n            \"empiricalCompound\": {\n                \"mass\": 517.3172,\n                \"retentionTime\": 19.4689\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 2628,\n                \"name\": \"PC(O-14:0/2:0)\"\n            },\n            \"adduct\": \"M+Na\"\n        },\n        {\n            \"identifier\": 187,\n            \"empiricalCompound\": {\n                \"mass\": 280.2402,\n                \"retentionTime\": 28.2695\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31499,\n                \"name\": \"10E,12E-Hexadecadienyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        },\n        {\n            \"identifier\": 496,\n            \"empiricalCompound\": {\n                \"mass\": 282.2563,\n                \"retentionTime\": 31.2616\n            },\n            \"theoreticalCompound\": {\n                \"identifier\": 31512,\n                \"name\": \"10Z-Hexadecenyl acetate\"\n            },\n            \"adduct\": \"M+H\"\n        }\n    ]\n  \n}\n\n~~~~\nLIS takes as input an experiment."@en .
+<https://w3id.org/def/lis#Experiment> <http://www.w3.org/2000/01/rdf-schema#label> "experiment"@en .
+# 
+# https://w3id.org/def/lis#Explanation
+<https://w3id.org/def/lis#Explanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#Explanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasRuleType> .
+_:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#RuleType> .
+<https://w3id.org/def/lis#Explanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#coreInformation> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#Explanation> <http://www.w3.org/2000/01/rdf-schema#comment> "Text describing a reasoning process. Every explanation has a core information that, depending on the rule that has been fired, can be extended with more information. Below is presented an example of explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical \n                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n    }\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n   \"@type\":\"https://w3id.org/def/lis#Explanation\",\n   \n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical \n                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#Explanation> <http://www.w3.org/2000/01/rdf-schema#label> "explanation"@en .
+# 
+# https://w3id.org/def/lis#Hypothesis
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasEmpiricalCompound> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#EmpiricalCompound> .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasTheoreticalCompound> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/lis#TheoreticalCompound> .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#identifier> .
+_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#adduct> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A hypothesis is characterised by an empirical compound, a theoretical compound and an adduct. Below is presented an example of hypothesis in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n    \"identifier\": 3,\n    \"empiricalCompound\": {\n       \"mass\": 399.3367,\n       \"retentionTime\": 18.8425\n     },\n     \"theoreticalCompound\": {\n        \"identifier\": 32675,\n        \"name\": \"L-palmitoylcarnitine\"\n     },\n     \"adduct\": \"M+H\"\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#Hypothesis\",\n\n    \"identifier\": 3,\n    \"empiricalCompound\": {\n       \"mass\": 399.3367,\n       \"retentionTime\": 18.8425\n     },\n     \"theoreticalCompound\": {\n        \"identifier\": 32675,\n        \"name\": \"L-palmitoylcarnitine\"\n     },\n     \"adduct\": \"M+H\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "hypothesis"@en .
+# 
+# https://w3id.org/def/lis#IRExplanation
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasRuleType> .
+_:genid17 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/lis#ionizationRuleType> .
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#additionalInformation> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/2000/01/rdf-schema#comment> "Explanation of a ionization rule. If the same conclusion is attained through an adduct relation rule, additional information explaining this fact is added to the core information. Below is presented an example of ionization rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical compound \n                            PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n   \"@type\":\"https://w3id.org/def/lis#IRExplanation\",\n\n      \"coreInformation\":\"The empirical compound 517.3172@19.4689 (in an experiment with positive ionization and modifier NH3) is expected to be the theoretical \n                            compound PC(O-14:0/2:0) with adduct M+Na, which belongs to the hierarchy GP, GP01, GP0102\",\n      \"additionalInformation\":\"The empirical compound 495.3352@19.4689 is expected to be the theoretical compound PC(O-14:0/2:0) with adduct M+H, because, for example, \n                                  the empirical compound 517.3172@19.4689 with adduct M+Na may be the theoretical compound PC(O-14:0/2:0) as well.\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#IRExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "ionization rule explanation"@en .
+# 
+# https://w3id.org/def/lis#IonizationMode
+<https://w3id.org/def/lis#IonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#IonizationMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/lis#IonizationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "It can be positive or negative."@en .
+<https://w3id.org/def/lis#IonizationMode> <http://www.w3.org/2000/01/rdf-schema#label> "ionization mode"@en .
+# 
+# https://w3id.org/def/lis#Modifier
+<https://w3id.org/def/lis#Modifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#Modifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/lis#Modifier> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a substance that plays the role of modifier in an experiment. The possible modifieres are\n\n- NH3;\n- HCOO;\n- CH3COO;\n- HCOONH3; or\n- CH3COONH3"@en .
+<https://w3id.org/def/lis#Modifier> <http://www.w3.org/2000/01/rdf-schema#label> "modifier"@en .
+# 
+# https://w3id.org/def/lis#RTRExplanation
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/lis#Explanation> .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#hasRuleType> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/lis#retentionTimeRuleType> .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#evidenceAgainst> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#evidenceFor> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#comment> "Explanation of the execution of a retention time rule. It can contain evidence for, evidence against or both. Below is presented an example of retention time rule explanation in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n    {\n      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The \n                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",\n      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ \n                        lipid with 18 carbons and 2 double bonds.\",\n      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid \n                            with 18 carbons and no double bond.\"\n  }\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n   \"@context\":\n\"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n   \"@type\":\"https://w3id.org/def/lis#RTRExplanation\",\n  \n      \"coreInformation\":\"It is possible that the empirical compound 282.2563@31.2616 is the theoretical compound 10Z-Hexadecenyl acetate with adduct M+H. The \n                            theoretical compound is a _WE_OPENPAR_ lipid with 18 carbons and one double bond\",\n      \"evidenceFor\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 10E,12E-Hexadecadienyl acetate with adduct M+H, another _WE_OPENPAR_ \n                        lipid with 18 carbons and 2 double bonds.\",\n      \"evidenceAgainst\":\"For example, the compound 280.2402@28.2695 may be the theoretical compound 11-Hexadecynyl acetate with adduct M+H, another _WE_OPENPAR_ lipid\n                            with 18 carbons and no double bond.\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#RTRExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "retention rule explanation"@en .
+# 
+# https://w3id.org/def/lis#RuleType
+<https://w3id.org/def/lis#RuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#RuleType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/lis#RuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The rule types are ionization, adduct relation and retention time."@en .
+<https://w3id.org/def/lis#RuleType> <http://www.w3.org/2000/01/rdf-schema#label> "rule type"@en .
+# 
+# https://w3id.org/def/lis#TheoreticalCompound
+<https://w3id.org/def/lis#TheoreticalCompound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/lis#TheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#identifier> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/lis#TheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/lis#name> .
+_:genid23 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/lis#TheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#comment> "A theoretical compound has a name and an identifier. Below is presented an example of theoretical compound in JSON (assuming a [particular context](https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld)):\n~~~~\n{\n    \"identifier\": 32675,\n    \"name\": \"L-palmitoylcarnitine\"\n}\n~~~~\nand here, an example in JSON-LD:\n~~~~\n{\n    \"@context\": \"https://raw.githubusercontent.com/marianofl1971/lis/master/OnToology/lis.owl/context/context.jsonld\",\n    \"@type\": \"https://w3id.org/def/lis#TheoreticalCompound\",\n    \"identifier\": 32675,\n    \"name\": \"L-palmitoylcarnitine\"\n}\n~~~~"@en .
+<https://w3id.org/def/lis#TheoreticalCompound> <http://www.w3.org/2000/01/rdf-schema#label> "theoretical compound"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/lis#adductRelationRuleType
+<https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
+<https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>adduct relation</i>."@en .
+<https://w3id.org/def/lis#adductRelationRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "adduct relation type rule"@en .
+# 
+# https://w3id.org/def/lis#expected
+<https://w3id.org/def/lis#expected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#expected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#expected> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>expected</i>."@en .
+<https://w3id.org/def/lis#expected> <http://www.w3.org/2000/01/rdf-schema#label> "expected"@en .
+# 
+# https://w3id.org/def/lis#impossible
+<https://w3id.org/def/lis#impossible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#impossible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#impossible> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>impossible</i>."@en .
+<https://w3id.org/def/lis#impossible> <http://www.w3.org/2000/01/rdf-schema#label> "impossible"@en .
+# 
+# https://w3id.org/def/lis#improbable
+<https://w3id.org/def/lis#improbable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#improbable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#improbable> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>improbable</i>."@en .
+<https://w3id.org/def/lis#improbable> <http://www.w3.org/2000/01/rdf-schema#label> "improbable"@en .
+# 
+# https://w3id.org/def/lis#ionizationRuleType
+<https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
+<https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>ionization</i>."@en .
+<https://w3id.org/def/lis#ionizationRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "ionization rule type"@en .
+# 
+# https://w3id.org/def/lis#modifierCH3COO
+<https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/2000/01/rdf-schema#comment> "The modifier CH3COO."@en .
+<https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/2000/01/rdf-schema#label> "modifier CH3COO"@en .
+<https://w3id.org/def/lis#modifierCH3COO> <http://www.w3.org/2004/02/skos/core#altLabel> "CH3COO"@en .
+# 
+# https://w3id.org/def/lis#modifierCH3COONH3
+<https://w3id.org/def/lis#modifierCH3COONH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#modifierCH3COONH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#modifierCH3COONH3> <http://www.w3.org/2000/01/rdf-schema#comment> "The modifier CH3COONH3."@en .
+<https://w3id.org/def/lis#modifierCH3COONH3> <http://www.w3.org/2000/01/rdf-schema#label> "modifier CH3COONH3"@en .
+<https://w3id.org/def/lis#modifierCH3COONH3> <http://www.w3.org/2004/02/skos/core#altLabel> "CH3COONH3"@en .
+# 
+# https://w3id.org/def/lis#modifierHCOO
+<https://w3id.org/def/lis#modifierHCOO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#modifierHCOO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#modifierHCOO> <http://www.w3.org/2000/01/rdf-schema#label> "The modifier HCOO."@en .
+<https://w3id.org/def/lis#modifierHCOO> <http://www.w3.org/2000/01/rdf-schema#label> "modifier HCOO"@en .
+<https://w3id.org/def/lis#modifierHCOO> <http://www.w3.org/2004/02/skos/core#altLabel> "HCOO"@en .
+# 
+# https://w3id.org/def/lis#modifierHCOONH3
+<https://w3id.org/def/lis#modifierHCOONH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#modifierHCOONH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#modifierHCOONH3> <http://www.w3.org/2000/01/rdf-schema#comment> "The modifier HCOONH3."@en .
+<https://w3id.org/def/lis#modifierHCOONH3> <http://www.w3.org/2000/01/rdf-schema#label> "modifier HCOONH3"@en .
+<https://w3id.org/def/lis#modifierHCOONH3> <http://www.w3.org/2004/02/skos/core#altLabel> "HCOONH3"@en .
+# 
+# https://w3id.org/def/lis#modifierNH3
+<https://w3id.org/def/lis#modifierNH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#modifierNH3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#Modifier> .
+<https://w3id.org/def/lis#modifierNH3> <http://www.w3.org/2000/01/rdf-schema#comment> "The modifier NH3."@en .
+<https://w3id.org/def/lis#modifierNH3> <http://www.w3.org/2000/01/rdf-schema#label> "modifier NH3"@en .
+<https://w3id.org/def/lis#modifierNH3> <http://www.w3.org/2004/02/skos/core#altLabel> "NH3"@en .
+# 
+# https://w3id.org/def/lis#negativeIonizationMode
+<https://w3id.org/def/lis#negativeIonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#negativeIonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#IonizationMode> .
+<https://w3id.org/def/lis#negativeIonizationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The negative ionization mode."@en .
+<https://w3id.org/def/lis#negativeIonizationMode> <http://www.w3.org/2000/01/rdf-schema#label> "negative ionization mode"@en .
+# 
+# https://w3id.org/def/lis#positiveIonizationMode
+<https://w3id.org/def/lis#positiveIonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#positiveIonizationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#IonizationMode> .
+<https://w3id.org/def/lis#positiveIonizationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The positive ionization mode."@en .
+<https://w3id.org/def/lis#positiveIonizationMode> <http://www.w3.org/2000/01/rdf-schema#label> "positive ionization mode"@en .
+# 
+# https://w3id.org/def/lis#possible
+<https://w3id.org/def/lis#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#possible> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>possible</i>."@en .
+<https://w3id.org/def/lis#possible> <http://www.w3.org/2000/01/rdf-schema#label> "possible"@en .
+# 
+# https://w3id.org/def/lis#retentionTimeRuleType
+<https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#RuleType> .
+<https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of rule <i>retention time</i>."@en .
+<https://w3id.org/def/lis#retentionTimeRuleType> <http://www.w3.org/2000/01/rdf-schema#label> "retention time rule type"@en .
+# 
+# https://w3id.org/def/lis#sure
+<https://w3id.org/def/lis#sure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/lis#sure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/lis#CertaintyLevel> .
+<https://w3id.org/def/lis#sure> <http://www.w3.org/2000/01/rdf-schema#comment> "The certainty level <i>sure</i>."@en .
+<https://w3id.org/def/lis#sure> <http://www.w3.org/2000/01/rdf-schema#label> "sure"@en .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
